@@ -51,27 +51,42 @@ const glowTexture=(()=>{const c=document.createElement('canvas');c.width=c.heigh
 const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTexture,color:0xc49aff,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));glow.scale.set(.8,.8,1);windGroup.add(glow);
 // Soft radial star texture with a brilliant core and four fine diffraction spikes.
 const starTexture=(()=>{const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');const g=x.createRadialGradient(64,64,0,64,64,60);g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(.08,'rgba(252,238,255,1)');g.addColorStop(.22,'rgba(199,139,255,.85)');g.addColorStop(.52,'rgba(143,67,255,.20)');g.addColorStop(1,'rgba(120,40,255,0)');x.fillStyle=g;x.fillRect(0,0,128,128);x.translate(64,64);for(let a=0;a<4;a++){x.rotate(Math.PI/4);const grad=x.createLinearGradient(0,-51,0,51);grad.addColorStop(0,'rgba(226,190,255,0)');grad.addColorStop(.45,'rgba(249,235,255,.32)');grad.addColorStop(.5,'rgba(255,255,255,.9)');grad.addColorStop(.55,'rgba(249,235,255,.32)');grad.addColorStop(1,'rgba(226,190,255,0)');x.fillStyle=grad;x.beginPath();x.moveTo(0,-51);x.lineTo(2.3,0);x.lineTo(0,51);x.lineTo(-2.3,0);x.closePath();x.fill();}return new THREE.CanvasTexture(c)})();
-const windParticles=[];
-for(let i=0;i<52;i++){const m=new THREE.SpriteMaterial({map:starTexture,color:i%4===0?0xffffff:0xe6c6ff,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false});const o=new THREE.Sprite(m);windGroup.add(o);windParticles.push(o)}
-const leftPos=new THREE.Vector3(),rightPos=new THREE.Vector3(),windMid=new THREE.Vector3(),windAxis=new THREE.Vector3();
+// One living orb follows the animated hand bones and travels between palms.
+const orbCore=new THREE.Sprite(new THREE.SpriteMaterial({map:starTexture,color:0xf7eaff,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));
+windGroup.add(orbCore);
+const orbHalo=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTexture,color:0x9b48ff,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,opacity:.9}));
+windGroup.add(orbHalo);
+const leftPos=new THREE.Vector3(),rightPos=new THREE.Vector3(),windMid=new THREE.Vector3();
+const orbWorld=new THREE.Vector3(),lastOrb=new THREE.Vector3();
+let orbInitialized=false;
 function animateFire(time){
  if(!character)return;
  character.updateMatrixWorld(true);
- if(leftHand&&rightHand){leftHand.getWorldPosition(leftPos);rightHand.getWorldPosition(rightPos)}
- else{leftPos.set(-.4,1.3,.3);rightPos.set(.4,1.3,.3)}
- windMid.copy(leftPos).add(rightPos).multiplyScalar(.5);
- windGroup.position.copy(windMid);windGroup.position.y+=.06;
- const span=Math.max(.35,leftPos.distanceTo(rightPos));
- windAxis.copy(rightPos).sub(leftPos).normalize();
- const width=Math.min(1.15,span*.52);
- const surge=1+.18*Math.sin(time*1.9)+.12*Math.sin(time*4.7);glow.scale.setScalar((.7+.18*Math.sin(time*3.7))*surge);
- windLight.intensity=2.8+1.1*Math.sin(time*4)**2+.55*Math.sin(time*1.9)**2;
- for(let i=0;i<windParticles.length;i++){
-  const o=windParticles[i],u=(time*(.45+i%5*.035)+i/windParticles.length)%1,a=u*Math.PI*5-time*2.7+i*2.4;
-  const taper=Math.sin(u*Math.PI);
-  o.position.set(windAxis.x*(u-.5)*span*.9+Math.cos(a)*(.11+.17*taper),windAxis.y*(u-.5)*span*.9+Math.sin(a)*.19+.05,windAxis.z*(u-.5)*span*.9+Math.sin(a)*.17);
-  const twinkle=.4+.6*Math.pow(Math.max(0,Math.sin(time*(8+i%7)+i*2.4)),4);o.scale.setScalar((.095+.115*taper)*twinkle);o.material.opacity=(.25+.75*taper)*twinkle;
+ if(leftHand&&rightHand){
+  leftHand.getWorldPosition(leftPos);rightHand.getWorldPosition(rightPos);
+ }else{
+  // Do not fake hand motion when rig bones cannot be identified.
+  windGroup.visible=false;return;
  }
+ windGroup.visible=true;
+ // Smooth transfers with brief holds at each palm, aligned to the model's animation.
+ const phase=(time*.36)%2;
+ const transfer=phase<1?phase:2-phase;
+ const hold=.20;
+ const u=Math.max(0,Math.min(1,(transfer-hold)/(1-2*hold)));
+ const eased=u*u*(3-2*u);
+ orbWorld.copy(leftPos).lerp(rightPos,eased);
+ // Raise the orb slightly during transfer, while keeping it close to the hands.
+ orbWorld.y+=.065+.16*Math.sin(Math.PI*eased);
+ if(!orbInitialized){lastOrb.copy(orbWorld);orbInitialized=true;}
+ lastOrb.lerp(orbWorld,.23);
+ windGroup.position.copy(lastOrb);
+ const pulse=1+.09*Math.sin(time*5.8)+.045*Math.sin(time*11);
+ glow.position.set(0,0,0);glow.scale.set(.68*pulse,.68*pulse,1);
+ orbHalo.position.set(0,0,0);orbHalo.scale.set(.66*pulse,.66*pulse,1);
+ orbCore.position.set(0,0,0);orbCore.scale.set(.19*pulse,.19*pulse,1);
+ windLight.position.set(0,0,0);
+ windLight.intensity=2.8+.65*Math.sin(time*4.4)**2;
 }
 
 function replay(){introStart=performance.now();introActive=true;controls.enabled=false}document.querySelector('#intro').onclick=replay;
