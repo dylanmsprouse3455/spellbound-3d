@@ -45,32 +45,55 @@ const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamp
 const targetPos=new THREE.Vector3(0,2.65,7.7),targetLook=new THREE.Vector3(0,1.6,-6);
 let introStart=performance.now(),introActive=!reduced,mixer=null,character=null;
 let leftHand=null,rightHand=null;
-const fireGroup=new THREE.Group();scene.add(fireGroup);
-const fireCore=new THREE.Mesh(new THREE.SphereGeometry(.15,16,12),new THREE.MeshBasicMaterial({color:0xffb338,transparent:true,opacity:.86,depthWrite:false}));
-fireGroup.add(fireCore);
-const fireLight=new THREE.PointLight(0xff7c24,2.3,4,2);fireGroup.add(fireLight);
-const flameMat=new THREE.MeshBasicMaterial({color:0xff8b22,transparent:true,opacity:.8,depthWrite:false,blending:THREE.AdditiveBlending,side:THREE.DoubleSide});
-const flameGeo=new THREE.ConeGeometry(.085,.33,5);
-const flames=[];for(let i=0;i<24;i++){const f=new THREE.Mesh(flameGeo,flameMat.clone());fireGroup.add(f);flames.push(f)}
-const emberGeo=new THREE.SphereGeometry(.018,5,4),embers=[];for(let i=0;i<35;i++){const e=new THREE.Mesh(emberGeo,new THREE.MeshBasicMaterial({color:i%3?0xffa23c:0xffe5a3,transparent:true,opacity:.8,depthWrite:false}));fireGroup.add(e);embers.push(e)}
-const leftPos=new THREE.Vector3(),rightPos=new THREE.Vector3(),fireMid=new THREE.Vector3();
+const windGroup=new THREE.Group();scene.add(windGroup);
+const windLight=new THREE.PointLight(0x9e50ff,2.2,4.5,2);windGroup.add(windLight);
+const glowTexture=(()=>{const c=document.createElement('canvas');c.width=c.height=128;const ctx=c.getContext('2d');const g=ctx.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,'rgba(243,208,255,1)');g.addColorStop(.14,'rgba(177,95,255,.85)');g.addColorStop(.42,'rgba(126,50,246,.28)');g.addColorStop(1,'rgba(126,50,246,0)');ctx.fillStyle=g;ctx.fillRect(0,0,128,128);return new THREE.CanvasTexture(c)})();
+const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTexture,color:0xc49aff,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));glow.scale.set(.8,.8,1);windGroup.add(glow);
+const ribbons=[];const ribbonCount=5,segments=48;
+for(let j=0;j<ribbonCount;j++){
+ const positions=new Float32Array((segments+1)*3),colors=new Float32Array((segments+1)*3);
+ const geom=new THREE.BufferGeometry();geom.setAttribute('position',new THREE.BufferAttribute(positions,3));geom.setAttribute('color',new THREE.BufferAttribute(colors,3));
+ const material=new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:j<2?.82:.47,blending:THREE.AdditiveBlending,depthWrite:false});
+ const line=new THREE.Line(geom,material);line.frustumCulled=false;windGroup.add(line);ribbons.push({line,positions,colors,j});
+}
+const windParticles=[];const pGeo=new THREE.SphereGeometry(.018,6,4);
+for(let i=0;i<34;i++){const m=new THREE.MeshBasicMaterial({color:i%4===0?0xf1d6ff:0x9b5cff,transparent:true,opacity:.7,blending:THREE.AdditiveBlending,depthWrite:false});const o=new THREE.Mesh(pGeo,m);windGroup.add(o);windParticles.push(o)}
+const leftPos=new THREE.Vector3(),rightPos=new THREE.Vector3(),windMid=new THREE.Vector3(),windAxis=new THREE.Vector3();
 function animateFire(time){
  if(!character)return;
  character.updateMatrixWorld(true);
  if(leftHand&&rightHand){leftHand.getWorldPosition(leftPos);rightHand.getWorldPosition(rightPos)}
- else{leftPos.set(-.38,1.32,.42);rightPos.set(.38,1.32,.42)}
- fireMid.copy(leftPos).add(rightPos).multiplyScalar(.5);fireMid.y+=.10;
- fireGroup.position.copy(fireMid);
- const span=leftPos.distanceTo(rightPos),width=Math.max(.27,Math.min(1.1,span*.7));
- fireCore.scale.setScalar(1+.15*Math.sin(time*11));
- fireLight.intensity=1.6+.7*Math.sin(time*14)**2;
- for(let i=0;i<flames.length;i++){const f=flames[i],phase=i*2.39996+time*(2.3+(i%4)*.22),a=(i%7)/6;
- f.position.set(Math.cos(phase)*width*(.12+.36*a),Math.sin(phase*1.7)*.13+Math.sin(time*4+i)*.04,Math.sin(phase)*.18);
- f.rotation.set(Math.sin(phase)*.6,phase,Math.cos(phase)*.6);
- f.scale.set(.6+a*.8,.55+a*1.8,.6+a*.8);f.material.opacity=.35+.5*Math.abs(Math.sin(time*3+i));
+ else{leftPos.set(-.4,1.3,.3);rightPos.set(.4,1.3,.3)}
+ windMid.copy(leftPos).add(rightPos).multiplyScalar(.5);
+ windGroup.position.copy(windMid);windGroup.position.y+=.06;
+ const span=Math.max(.35,leftPos.distanceTo(rightPos));
+ windAxis.copy(rightPos).sub(leftPos).normalize();
+ const width=Math.min(1.15,span*.52);
+ glow.scale.setScalar(.62+.12*Math.sin(time*3.7));
+ windLight.intensity=1.65+.55*Math.sin(time*4)**2;
+ // Sweeping, continuously flowing helical ribbons: no cones or flame shapes.
+ for(const r of ribbons){
+  const {positions,colors,j}=r;
+  for(let i=0;i<=segments;i++){
+   const u=i/segments,travel=(u-.5)*span*.94;
+   const a=u*Math.PI*(3.5+j*.34)-time*(4.4+j*.23)+j*1.45;
+   const taper=Math.pow(Math.max(0,Math.sin(Math.PI*u)),.65);
+   const radius=(.09+.12*Math.sin(u*Math.PI))*taper;
+   const drift=Math.sin(u*12-time*3+j)*.04;
+   const k=i*3;
+   positions[k]=windAxis.x*travel+Math.cos(a)*radius+drift;
+   positions[k+1]=windAxis.y*travel+Math.sin(a)*radius+Math.sin(u*7-time*2+j)*.06;
+   positions[k+2]=windAxis.z*travel+Math.cos(a+1.6)*radius;
+   const lum=.16+.84*taper;colors[k]=(.43+.43*Math.sin(a)**2)*lum;colors[k+1]=(.13+.30*Math.sin(a)**2)*lum;colors[k+2]=1*lum;
+  }
+  r.line.geometry.attributes.position.needsUpdate=true;r.line.geometry.attributes.color.needsUpdate=true;
  }
- for(let i=0;i<embers.length;i++){const e=embers[i],cycle=(time*(.28+(i%5)*.07)+i*.183)%1,angle=i*2.399;
- e.position.set(Math.cos(angle+time)*(.06+cycle*.36),cycle*.8-.18,Math.sin(angle+time)*(.07+cycle*.24));e.scale.setScalar(.45+cycle*.7);e.material.opacity=(1-cycle)*.85}
+ for(let i=0;i<windParticles.length;i++){
+  const o=windParticles[i],u=(time*(.45+i%5*.035)+i/34)%1,a=u*Math.PI*5-time*2.7+i*2.4;
+  const taper=Math.sin(u*Math.PI);
+  o.position.set(windAxis.x*(u-.5)*span*.9+Math.cos(a)*(.11+.17*taper),windAxis.y*(u-.5)*span*.9+Math.sin(a)*.19+.05,windAxis.z*(u-.5)*span*.9+Math.sin(a)*.17);
+  o.scale.setScalar(.45+.8*taper);o.material.opacity=.12+.75*taper;
+ }
 }
 
 function replay(){introStart=performance.now();introActive=true;controls.enabled=false}document.querySelector('#intro').onclick=replay;
