@@ -44,12 +44,43 @@ const particles=[];const particleMat=new THREE.PointsMaterial({color:0xffe5bd,si
 const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=false;controls.minDistance=3.2;controls.maxDistance=15;controls.maxPolarAngle=Math.PI*.48;controls.minPolarAngle=.35;controls.target.set(0,1.6,0);
 const targetPos=new THREE.Vector3(0,2.65,7.7),targetLook=new THREE.Vector3(0,1.6,-6);
 let introStart=performance.now(),introActive=!reduced,mixer=null,character=null;
+let leftHand=null,rightHand=null;
+const fireGroup=new THREE.Group();scene.add(fireGroup);
+const fireCore=new THREE.Mesh(new THREE.SphereGeometry(.15,16,12),new THREE.MeshBasicMaterial({color:0xffb338,transparent:true,opacity:.86,depthWrite:false}));
+fireGroup.add(fireCore);
+const fireLight=new THREE.PointLight(0xff7c24,2.3,4,2);fireGroup.add(fireLight);
+const flameMat=new THREE.MeshBasicMaterial({color:0xff8b22,transparent:true,opacity:.8,depthWrite:false,blending:THREE.AdditiveBlending,side:THREE.DoubleSide});
+const flameGeo=new THREE.ConeGeometry(.085,.33,5);
+const flames=[];for(let i=0;i<24;i++){const f=new THREE.Mesh(flameGeo,flameMat.clone());fireGroup.add(f);flames.push(f)}
+const emberGeo=new THREE.SphereGeometry(.018,5,4),embers=[];for(let i=0;i<35;i++){const e=new THREE.Mesh(emberGeo,new THREE.MeshBasicMaterial({color:i%3?0xffa23c:0xffe5a3,transparent:true,opacity:.8,depthWrite:false}));fireGroup.add(e);embers.push(e)}
+const leftPos=new THREE.Vector3(),rightPos=new THREE.Vector3(),fireMid=new THREE.Vector3();
+function animateFire(time){
+ if(!character)return;
+ character.updateMatrixWorld(true);
+ if(leftHand&&rightHand){leftHand.getWorldPosition(leftPos);rightHand.getWorldPosition(rightPos)}
+ else{leftPos.set(-.38,1.32,.42);rightPos.set(.38,1.32,.42)}
+ fireMid.copy(leftPos).add(rightPos).multiplyScalar(.5);fireMid.y+=.10;
+ fireGroup.position.copy(fireMid);
+ const span=leftPos.distanceTo(rightPos),width=Math.max(.27,Math.min(1.1,span*.7));
+ fireCore.scale.setScalar(1+.15*Math.sin(time*11));
+ fireLight.intensity=1.6+.7*Math.sin(time*14)**2;
+ for(let i=0;i<flames.length;i++){const f=flames[i],phase=i*2.39996+time*(2.3+(i%4)*.22),a=(i%7)/6;
+ f.position.set(Math.cos(phase)*width*(.12+.36*a),Math.sin(phase*1.7)*.13+Math.sin(time*4+i)*.04,Math.sin(phase)*.18);
+ f.rotation.set(Math.sin(phase)*.6,phase,Math.cos(phase)*.6);
+ f.scale.set(.6+a*.8,.55+a*1.8,.6+a*.8);f.material.opacity=.35+.5*Math.abs(Math.sin(time*3+i));
+ }
+ for(let i=0;i<embers.length;i++){const e=embers[i],cycle=(time*(.28+(i%5)*.07)+i*.183)%1,angle=i*2.399;
+ e.position.set(Math.cos(angle+time)*(.06+cycle*.36),cycle*.8-.18,Math.sin(angle+time)*(.07+cycle*.24));e.scale.setScalar(.45+cycle*.7);e.material.opacity=(1-cycle)*.85}
+}
+
 function replay(){introStart=performance.now();introActive=true;controls.enabled=false}document.querySelector('#intro').onclick=replay;
 let low=mobile;function quality(){low=!low;renderer.setPixelRatio(Math.min(devicePixelRatio,low?1:2));renderer.shadowMap.enabled=!low;sun.castShadow=!low;dust.visible=!low;document.querySelector('#quality').textContent=low?'Quality: Lite':'Quality: High';}document.querySelector('#quality').onclick=quality;
 if(mobile)document.querySelector('#quality').textContent='Quality: Auto';
 function loaded(){document.querySelector('#loading').hidden=true;if(introActive)replay();else{camera.position.copy(targetPos);controls.enabled=true;controls.update();}}
-new FBXLoader().load('./character.fbx',model=>{const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const scale=2.05/Math.max(size.y,.001);model.position.set(-center.x*scale,-box.min.y*scale,-center.z*scale);model.scale.setScalar(scale);model.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true}});scene.add(model);character=model;if(model.animations.length){mixer=new THREE.AnimationMixer(model);mixer.clipAction(model.animations[0]).play()}loaded();},e=>{if(e.total)document.querySelector('#loadtext').textContent='Summoning the wizard… '+Math.round(e.loaded/e.total*100)+'%';},err=>{console.error(err);document.querySelector('#loadtext').textContent='Citadel ready — character unavailable';document.querySelector('#error').textContent='Could not load character.fbx';setTimeout(loaded,1200)});
-const clock=new THREE.Clock();let t=0;function frame(){requestAnimationFrame(frame);const dt=Math.min(clock.getDelta(),.05);t+=dt;if(mixer)mixer.update(dt);if(!reduced){for(let i=0;i<clouds.length;i++)clouds[i].position.x+=dt*(.18+i%3*.05);const p=pg.attributes.position;for(let i=0;i<p.count;i++){let y=p.getY(i)+dt*.13;if(y>14)y=.5;p.setY(i,y)}p.needsUpdate=true;}
+new FBXLoader().load('./character.fbx',model=>{const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const scale=2.05/Math.max(size.y,.001);model.position.set(-center.x*scale,-box.min.y*scale,-center.z*scale);model.scale.setScalar(scale);model.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true}});scene.add(model);character=model;
+ model.traverse(o=>{if(o.isBone){const n=o.name.toLowerCase();if(n.endsWith('lefthand'))leftHand=o;if(n.endsWith('righthand'))rightHand=o;}});
+ if(model.animations.length){mixer=new THREE.AnimationMixer(model);mixer.clipAction(model.animations[0]).play()}loaded();},e=>{if(e.total)document.querySelector('#loadtext').textContent='Summoning the wizard… '+Math.round(e.loaded/e.total*100)+'%';},err=>{console.error(err);document.querySelector('#loadtext').textContent='Citadel ready — character unavailable';document.querySelector('#error').textContent='Could not load character.fbx';setTimeout(loaded,1200)});
+const clock=new THREE.Clock();let t=0;function frame(){requestAnimationFrame(frame);const dt=Math.min(clock.getDelta(),.05);t+=dt;if(mixer)mixer.update(dt);animateFire(t);if(!reduced){for(let i=0;i<clouds.length;i++)clouds[i].position.x+=dt*(.18+i%3*.05);const p=pg.attributes.position;for(let i=0;i<p.count;i++){let y=p.getY(i)+dt*.13;if(y>14)y=.5;p.setY(i,y)}p.needsUpdate=true;}
 if(introActive){const u=Math.min((performance.now()-introStart)/9000,1),s=u*u*(3-2*u);camera.position.set(14*(1-s)+targetPos.x*s,17*(1-s)+targetPos.y*s,30*(1-s)+targetPos.z*s);controls.target.lerp(targetLook,u<.8?.015:.07);camera.lookAt(0,2,-7);if(u>=1){introActive=false;controls.enabled=true;controls.target.set(0,1.6,0);camera.position.copy(targetPos)}}else controls.update();
 renderer.render(scene,camera)}controls.enabled=!introActive;frame();
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
