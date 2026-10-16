@@ -33,7 +33,7 @@ import {OrbitControls} from 'https://esm.sh/three@0.170.0/examples/jsm/controls/
 import {FBXLoader} from 'https://esm.sh/three@0.170.0/examples/jsm/loaders/FBXLoader.js';
 import {GLTFLoader} from 'https://esm.sh/three@0.170.0/examples/jsm/loaders/GLTFLoader.js';
 import * as SkeletonUtils from 'https://esm.sh/three@0.170.0/examples/jsm/utils/SkeletonUtils.js';
-if(new URLSearchParams(location.search).get('movement')==='compare'){await import('./movement-candidates/compare.js');}else{
+if(new URLSearchParams(location.search).get('movement')==='compare'){await import('./movement-candidates/compare.js?build=1');}else{
 const mobile=/iPhone|iPad|Android/i.test(navigator.userAgent),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x101b23);scene.fog=new THREE.FogExp2(0x1b292b,.018);
 const camera=new THREE.PerspectiveCamera(mobile?65:58,innerWidth/innerHeight,.1,450);
