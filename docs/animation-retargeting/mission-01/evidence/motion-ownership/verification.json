@@ -1,0 +1,408 @@
+{
+  "url": "http://127.0.0.1:8790/docs/animation-retargeting/mission-01/",
+  "fireAttack": {
+    "attack": "dualwave",
+    "hits": 3
+  },
+  "fireRun": {
+    "action": {
+      "name": "Run",
+      "time": 0.5916666507720948,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Run",
+    "moving": true,
+    "position": [
+      -0.11249999999999971,
+      0,
+      16
+    ],
+    "speed": 4.25,
+    "warning": false
+  },
+  "fireArms": [
+    {
+      "elbow": [
+        0.836381225481533,
+        1.4615230726784945,
+        15.531158818786624
+      ],
+      "fingerAlignment": 0.9999999999999962,
+      "hand": [
+        0.9954824839395487,
+        1.2141925896545396,
+        15.53704174962418
+      ],
+      "legForward": 0.7293355604907575,
+      "palmRollAlignment": 0.9999999992047952,
+      "shoulder": [
+        1.086021281245696,
+        1.6221289473665488,
+        15.501488797925976
+      ],
+      "side": "left",
+      "thumbSideUp": 0.3410733970903364,
+      "upperDown": -0.5383681013407805,
+      "upperForward": -0.8368202156185015
+    },
+    {
+      "elbow": [
+        0.9166580809014766,
+        1.4270433440588453,
+        15.955919979340921
+      ],
+      "fingerAlignment": 0.9999999999999798,
+      "hand": [
+        1.1929685837095723,
+        1.5276298902792165,
+        15.95004139380353
+      ],
+      "legForward": -0.3103086349332815,
+      "palmRollAlignment": 0.9999999999865649,
+      "shoulder": [
+        0.8151196540892354,
+        1.705961099216459,
+        15.985600040047384
+      ],
+      "side": "right",
+      "thumbSideUp": 0.9876792294911972,
+      "upperDown": -0.9350076026496351,
+      "upperForward": 0.34038421365037813
+    }
+  ],
+  "directions": [
+    {
+      "state": {
+        "action": {
+          "name": "Run",
+          "time": 0.10595236505780903,
+          "weight": 1
+        },
+        "channel": false,
+        "hands": false,
+        "mode": "Exploration",
+        "motion": "Run",
+        "moving": true,
+        "position": [
+          -8.187500000000005,
+          0,
+          16
+        ],
+        "speed": 4.25,
+        "warning": false
+      },
+      "arms": [
+        {
+          "elbow": [
+            -7.347077385282393,
+            1.3918555902171648,
+            16.398193490232167
+          ],
+          "fingerAlignment": 0.9999999999999936,
+          "hand": [
+            -7.626830739014741,
+            1.4825660723500698,
+            16.392725814290355
+          ],
+          "legForward": -0.59369730267926,
+          "palmRollAlignment": 0.9999999431432056,
+          "shoulder": [
+            -7.2554680086130645,
+            1.6742295965508578,
+            16.427644163713317
+          ],
+          "side": "left",
+          "thumbSideUp": 0.9959873006744262,
+          "upperDown": -0.9465480064566049,
+          "upperForward": 0.30680039856683694
+        },
+        {
+          "elbow": [
+            -6.597811411285926,
+            1.5643418110910625,
+            16.083030627005467
+          ],
+          "fingerAlignment": 0.9999999999999925,
+          "hand": [
+            -6.765767188611153,
+            1.322987739947308,
+            16.08925623460188
+          ],
+          "legForward": 0.6617233412910671,
+          "palmRollAlignment": 0.9999998682153055,
+          "shoulder": [
+            -6.841491644093703,
+            1.7338852394465352,
+            16.053686927432356
+          ],
+          "side": "right",
+          "thumbSideUp": 0.4044449581847449,
+          "upperDown": -0.5683553029430681,
+          "upperForward": -0.8165967159564436
+        }
+      ]
+    },
+    {
+      "state": {
+        "action": {
+          "name": "Run",
+          "time": 0.16666665077209475,
+          "weight": 1
+        },
+        "channel": false,
+        "hands": false,
+        "mode": "Exploration",
+        "motion": "Run",
+        "moving": true,
+        "position": [
+          -5,
+          0,
+          12.599999999999994
+        ],
+        "speed": 4.25,
+        "warning": false
+      },
+      "arms": [
+        {
+          "elbow": [
+            -5.397575444104897,
+            1.3851328191857148,
+            13.509083643808252
+          ],
+          "fingerAlignment": 0.9999999999999897,
+          "hand": [
+            -5.39188246391076,
+            1.4301045757658664,
+            13.21845440584043
+          ],
+          "legForward": -0.4188203288003894,
+          "palmRollAlignment": 0.999999949032772,
+          "shoulder": [
+            -5.427134397164057,
+            1.6784808152260273,
+            13.554558060215664
+          ],
+          "side": "left",
+          "thumbSideUp": 0.997523447297313,
+          "upperDown": -0.9833339905650357,
+          "upperForward": 0.15236461049122543
+        },
+        {
+          "elbow": [
+            -5.066507046812207,
+            1.5177046230734528,
+            14.168974338612763
+          ],
+          "fingerAlignment": 0.9999999999999919,
+          "hand": [
+            -5.072499531550963,
+            1.3059950319262768,
+            13.964908614684509
+          ],
+          "legForward": 0.5540216637313137,
+          "palmRollAlignment": 0.9999999285363229,
+          "shoulder": [
+            -5.037046257540392,
+            1.7237264751409296,
+            13.955261577937577
+          ],
+          "side": "right",
+          "thumbSideUp": 0.5441024504538199,
+          "upperDown": -0.6906408067666949,
+          "upperForward": -0.7163523768271898
+        }
+      ]
+    },
+    {
+      "state": {
+        "action": {
+          "name": "Run",
+          "time": 0.10595236505780903,
+          "weight": 1
+        },
+        "channel": false,
+        "hands": false,
+        "mode": "Exploration",
+        "motion": "Run",
+        "moving": true,
+        "position": [
+          -5,
+          0,
+          19.18749999999998
+        ],
+        "speed": 4.25,
+        "warning": false
+      },
+      "arms": [
+        {
+          "elbow": [
+            -4.603085436060184,
+            1.3918555902171648,
+            18.34935518636661
+          ],
+          "fingerAlignment": 0.9999999999999934,
+          "hand": [
+            -4.6101558666997615,
+            1.4825660723500698,
+            18.629072621317082
+          ],
+          "legForward": -0.5936973026792591,
+          "palmRollAlignment": 0.9999999431432057,
+          "shoulder": [
+            -4.573110370834263,
+            1.6742295965508578,
+            18.257916050724706
+          ],
+          "side": "left",
+          "thumbSideUp": 0.9959873006744253,
+          "upperDown": -0.9465480064566039,
+          "upperForward": 0.306800398566841
+        },
+        {
+          "elbow": [
+            -4.913950213331484,
+            1.5643418110910625,
+            17.598295787651573
+          ],
+          "fingerAlignment": 0.9999999999999927,
+          "hand": [
+            -4.908687009106754,
+            1.322987739947308,
+            17.766284477771336
+          ],
+          "legForward": 0.6617233412910682,
+          "palmRollAlignment": 0.9999998682153055,
+          "shoulder": [
+            -4.944689595072024,
+            1.7338852394465352,
+            17.84180389629705
+          ],
+          "side": "right",
+          "thumbSideUp": 0.40444495818474285,
+          "upperDown": -0.5683553029430698,
+          "upperForward": -0.8165967159564425
+        }
+      ]
+    }
+  ],
+  "idle": {
+    "action": {
+      "name": "Idle",
+      "time": 0.49999999999999994,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Idle",
+    "moving": false,
+    "position": [
+      -5,
+      0,
+      20.24999999999997
+    ],
+    "speed": 0,
+    "warning": false
+  },
+  "lightningChannel": {
+    "action": {
+      "name": "Idle",
+      "time": 1.7366999999992558,
+      "weight": 1
+    },
+    "channel": true,
+    "hands": true,
+    "mode": "Combat",
+    "motion": "Idle",
+    "moving": false,
+    "position": [
+      28.169999999999998,
+      0,
+      1
+    ],
+    "speed": 0,
+    "warning": true
+  },
+  "lightningRun": {
+    "action": {
+      "name": "Run",
+      "time": 0.2880952222006662,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Run",
+    "moving": true,
+    "position": [
+      -1.1749999999999998,
+      0,
+      16
+    ],
+    "speed": 4.25,
+    "warning": false
+  },
+  "lightningArms": [
+    {
+      "elbow": [
+        0.04722079241389165,
+        1.3865371044172439,
+        15.603089825367631
+      ],
+      "fingerAlignment": 0.9999999999999902,
+      "hand": [
+        0.3371814895546733,
+        1.4356109362948708,
+        15.608987113928768
+      ],
+      "legForward": -0.43824250222683614,
+      "palmRollAlignment": 0.999999951883076,
+      "shoulder": [
+        -0.0023664872225590827,
+        1.6792143950109732,
+        15.573495778414893
+      ],
+      "side": "left",
+      "thumbSideUp": 0.9984175254752201,
+      "upperDown": -0.9810857066392462,
+      "upperForward": 0.16622188617336317
+    },
+    {
+      "elbow": [
+        -0.6218207830991557,
+        1.5217938075129434,
+        15.9316823779599
+      ],
+      "fingerAlignment": 0.9999999999999919,
+      "hand": [
+        -0.42076171656394257,
+        1.3072230276585397,
+        15.925824678973548
+      ],
+      "legForward": 0.5598415920135635,
+      "palmRollAlignment": 0.9999999551970159,
+      "shoulder": [
+        -0.40523839076843826,
+        1.7247728865571335,
+        15.961307446209265
+      ],
+      "side": "right",
+      "thumbSideUp": 0.5322027805456153,
+      "upperDown": -0.6804406180842109,
+      "upperForward": -0.7260425931467226
+    }
+  ],
+  "captureSamples": 45,
+  "export": {
+    "name": "spellbound-motion-2026-10-16T20-42-03-172Z.json",
+    "network": [],
+    "protocol": "blob:"
+  },
+  "reviewStatus": "fire \u00b7 Idle \u00b7 owner: locomotion \u00b7 writers: mixer",
+  "replayMaxJointError": 0.0,
+  "errors": [],
+  "complete": true
+}

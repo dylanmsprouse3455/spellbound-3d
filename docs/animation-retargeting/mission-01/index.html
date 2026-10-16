@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1a2733"><meta name="spellbound-preview-build" content="mission1-running-arm-orientation-20261016"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%228%22 fill=%22%23101817%22/%3E%3Cpath d=%22M20 4 24 16 36 20 24 24 20 36 16 24 4 20 16 16Z%22 fill=%22%23c37b64%22/%3E%3C/svg%3E"><title>Spellbound 3D — Mission 01: The Forsaken Mall (Isolated HTTPS Preview)</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1a2733"><meta name="spellbound-preview-build" content="mission1-motion-ownership-20261016"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%228%22 fill=%22%23101817%22/%3E%3Cpath d=%22M20 4 24 16 36 20 24 24 20 36 16 24 4 20 16 16Z%22 fill=%22%23c37b64%22/%3E%3C/svg%3E"><title>Spellbound 3D — Mission 01: The Forsaken Mall (Isolated HTTPS Preview)</title>
 <style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#1a2733;color:#f4e8d5;font-family:system-ui,-apple-system,sans-serif}canvas{display:block;touch-action:none}#ui{position:fixed;inset:0;pointer-events:none}#brand{position:absolute;top:max(22px,env(safe-area-inset-top));left:0;right:0;text-align:center;text-shadow:0 2px 12px #08111e}#brand h1{font:normal clamp(23px,6vw,38px) Georgia,serif;letter-spacing:.19em;margin:0}#brand small{font-size:9px;letter-spacing:.38em;color:#d5c09b}#bottom{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font-size:11px;letter-spacing:.08em;color:#e5d6be;text-shadow:0 2px 9px #000}#actions{position:absolute;right:14px;top:max(22px,env(safe-area-inset-top));display:flex;gap:6px;pointer-events:auto}button{border:1px solid #c4b49888;background:#1b2c3acb;color:#f9ead6;padding:10px 12px;border-radius:12px;font:12px system-ui;backdrop-filter:blur(9px)}button:active{background:#455568}#lab{position:absolute;left:12px;top:90px;width:min(280px,calc(100vw - 24px));padding:12px;border:1px solid #b48ce077;border-radius:14px;background:#141a2cdd;pointer-events:auto;backdrop-filter:blur(12px);font-size:12px}#lab[hidden]{display:none}#lab{max-height:calc(100dvh - 125px);overflow-y:auto}#posePanel{border-top:1px solid #b48ce055;margin-top:12px;padding-top:12px}#posePanel button{margin:3px}#poseStatus{white-space:pre-wrap;color:#d9c4ff;font-size:11px}#lab label{display:flex;justify-content:space-between;gap:12px;margin:10px 0}#lab input{width:130px;accent-color:#ba7cff}#quickBar{position:absolute;left:10px;right:10px;bottom:max(42px,env(safe-area-inset-bottom));display:flex;justify-content:center;gap:5px;flex-wrap:wrap;pointer-events:auto}#quickBar button{padding:12px 9px;font-weight:600;border-color:#a88bc5aa}#quickFeedback{position:absolute;bottom:max(105px,calc(env(safe-area-inset-bottom) + 67px));left:12px;right:12px;text-align:center;font-size:11px;text-shadow:0 2px 4px #000;pointer-events:none}#lab{z-index:3;top:65px}#bottom{display:none}#loading{position:absolute;inset:0;background:#172331f2;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:4}#loading strong{font:normal 30px Georgia,serif;letter-spacing:.16em}#loading span{font-size:12px;color:#d3c4aa}#loading[hidden]{display:none}#error{color:#ffc9b4;max-width:300px;text-align:center}
 /* Movement view: keep loading and the hint, hide only test controls. */
@@ -24,10 +24,11 @@
 #bottom{font-size:10px;color:#d0d4c7;bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}
 @media(max-height:500px){#spellControls{bottom:calc(env(safe-area-inset-bottom,0px) + 10px);flex-direction:row;width:auto;align-items:center}#spellControls button{width:100px}.spellLabel,#spellStatus{display:none}#bottom{right:230px;left:5px;text-align:left;font-size:9px}}
 
-</style></head><body><div id="loading"><strong>SPELLBOUND</strong><span id="loadtext">Entering Mission 01 · The Forsaken Mall…</span><span id="error"></span></div><div id="prototypeBadge">FORSAKEN MALL · PREVIEW 5</div><div id="combatHud"><strong>PLAYER</strong><div id="playerBar"><div id="playerFill"></div></div><small id="enemyCount">4 hostile signatures</small></div><div id="damageFlash"></div><div id="ui"><div id="brand"><h1>SPELLBOUND</h1><small>THE FORGOTTEN CITADEL</small></div><div id="quickBar"><button id="quickWalk">Walk</button><button id="testIdle">Idle</button><button id="testRun">Run</button><button id="testJump">Jump</button><button id="testMagic">Magic</button><button id="quickPose">Pose</button><button id="quickExtend">Extend</button><button id="quickThrow">Throw</button><button id="quickCopy">Copy Activity</button><button id="quickTune">Tune</button></div><div id="quickFeedback" role="status">Tap a move, then Copy Activity to share its measurements.</div><div id="lab" hidden><strong>LIVE ORB CONTROLS</strong><label>Size <input id="orbSize" type="range" min="0.5" max="2.5" step="0.1" value="1.5"></label><label>Glow <input id="orbGlow" type="range" min="0.2" max="3" step="0.1" value="0.3"></label><label>Transfer speed <input id="orbSpeed" type="range" min="0.1" max="1.5" step="0.05" value="1"></label><button id="throwOrb">Throw Orb</button> <button id="orbReset">Reset</button> <button id="orbSave">Save settings for ChatGPT</button><div id="posePanel"><strong>POSE STUDIO V1 · RIGHT ARM</strong><p>Pause the base animation, position the wrist target, and inspect the skeleton.</p><button id="poseEnable">Enter Pose Mode</button><button id="poseExtend">Extend Forward</button><button id="poseReset">Reset Pose</button><label>Hand forward <input id="poseForward" type="range" min="0.25" max="1" step="0.01" value="0.95"></label><label>Hand height <input id="poseHeight" type="range" min="-0.4" max="0.5" step="0.01" value="0.05"></label><label>Hand sideways <input id="poseSide" type="range" min="-0.5" max="0.5" step="0.01" value="0"></label><button id="poseCapture">Capture Pose JSON</button><button id="poseDescribe">Describe Posture</button><button id="poseCopy">Copy Posture Report</button><textarea id="poseReport" readonly rows="9" style="display:none;width:100%;margin:8px 0;background:#101525;color:#e5d9ff;border:1px solid #8066a4;border-radius:8px;padding:8px;font-size:11px;resize:vertical"></textarea><div id="poseStatus" role="status">Waiting for skeleton…</div></div><div id="orbSaveStatus" role="status" style="margin-top:8px;color:#e0c6ff">Changes are temporary until saved.</div></div><div id="actions"><button id="intro">Replay</button><button id="quality">Quality: Auto</button></div><div id="bottom">DRAG TO MOVE · RELEASE TO STOP</div></div>
+</style></head><body><div id="loading"><strong>SPELLBOUND</strong><span id="loadtext">Entering Mission 01 · The Forsaken Mall…</span><span id="error"></span></div><div id="prototypeBadge">FORSAKEN MALL · PREVIEW 6</div><div id="combatHud"><strong>PLAYER</strong><div id="playerBar"><div id="playerFill"></div></div><small id="enemyCount">4 hostile signatures</small></div><div id="damageFlash"></div><div id="ui"><div id="brand"><h1>SPELLBOUND</h1><small>THE FORGOTTEN CITADEL</small></div><div id="quickBar"><button id="quickWalk">Walk</button><button id="testIdle">Idle</button><button id="testRun">Run</button><button id="testJump">Jump</button><button id="testMagic">Magic</button><button id="quickPose">Pose</button><button id="quickExtend">Extend</button><button id="quickThrow">Throw</button><button id="quickCopy">Copy Activity</button><button id="quickTune">Tune</button></div><div id="quickFeedback" role="status">Tap a move, then Copy Activity to share its measurements.</div><div id="lab" hidden><strong>LIVE ORB CONTROLS</strong><label>Size <input id="orbSize" type="range" min="0.5" max="2.5" step="0.1" value="1.5"></label><label>Glow <input id="orbGlow" type="range" min="0.2" max="3" step="0.1" value="0.3"></label><label>Transfer speed <input id="orbSpeed" type="range" min="0.1" max="1.5" step="0.05" value="1"></label><button id="throwOrb">Throw Orb</button> <button id="orbReset">Reset</button> <button id="orbSave">Save settings for ChatGPT</button><div id="posePanel"><strong>POSE STUDIO V1 · RIGHT ARM</strong><p>Pause the base animation, position the wrist target, and inspect the skeleton.</p><button id="poseEnable">Enter Pose Mode</button><button id="poseExtend">Extend Forward</button><button id="poseReset">Reset Pose</button><label>Hand forward <input id="poseForward" type="range" min="0.25" max="1" step="0.01" value="0.95"></label><label>Hand height <input id="poseHeight" type="range" min="-0.4" max="0.5" step="0.01" value="0.05"></label><label>Hand sideways <input id="poseSide" type="range" min="-0.5" max="0.5" step="0.01" value="0"></label><button id="poseCapture">Capture Pose JSON</button><button id="poseDescribe">Describe Posture</button><button id="poseCopy">Copy Posture Report</button><textarea id="poseReport" readonly rows="9" style="display:none;width:100%;margin:8px 0;background:#101525;color:#e5d9ff;border:1px solid #8066a4;border-radius:8px;padding:8px;font-size:11px;resize:vertical"></textarea><div id="poseStatus" role="status">Waiting for skeleton…</div></div><div id="orbSaveStatus" role="status" style="margin-top:8px;color:#e0c6ff">Changes are temporary until saved.</div></div><div id="actions"><button id="intro">Replay</button><button id="quality">Quality: Auto</button></div><div id="bottom">DRAG TO MOVE · RELEASE TO STOP</div></div>
 
 <script type="module">
 import * as THREE from 'https://esm.sh/three@0.170.0';
+import {createMotionRecorder} from './motion-recorder.js';
 import {OrbitControls} from 'https://esm.sh/three@0.170.0/examples/jsm/controls/OrbitControls.js';
 import {FBXLoader} from 'https://esm.sh/three@0.170.0/examples/jsm/loaders/FBXLoader.js';
 import {GLTFLoader} from 'https://esm.sh/three@0.170.0/examples/jsm/loaders/GLTFLoader.js';
@@ -455,7 +456,7 @@ document.querySelector('#ui').appendChild(spellUI);
 const attackNames={fire:{bolt:'Fireball',burst:'Flame wave',punch:'Flame punch',kick:'Flame kick'},lightning:{bolt:'Arc bolt',burst:'Storm burst',punch:'Shock punch',kick:'Shock kick'}};
 function chooseElement(element){
  if(selectedElement!==element)elementTransformStart=t;
- selectedElement=element;
+ selectedElement=element;motionRecorder.event('element',element);
  for(const [kind,id] of [['bolt','attackBolt'],['burst','attackBurst'],['punch','attackPunch'],['kick','attackKick']])if(document.getElementById(id))document.getElementById(id).textContent=attackNames[element][kind];
  document.querySelector('#elementLightning').setAttribute('aria-pressed',String(element==='lightning'));
  document.querySelector('#elementFire').setAttribute('aria-pressed',String(element==='fire'));
@@ -983,9 +984,9 @@ let combatMovementActive=false,movementSpeed=0;const explorationSpeed=4.25,comba
 const testCache={},motionLoads={};
 const motionRoot=new THREE.Group();scene.add(motionRoot);
 function loadMotion(name){
- if(!motionLoads[name])motionLoads[name]=new Promise((ok,no)=>fbxLoader.load('assets/animations/'+clips[name],ok,undefined,no)).then(asset=>{
+ if(!motionLoads[name])motionLoads[name]=(name==='Run'?fetch('assets/animations/Ch08_Run_Verified_v1.json').then(r=>{if(!r.ok)throw Error('Running clip unavailable');return r.json()}).then(data=>({animations:[THREE.AnimationClip.parse(data)]})):new Promise((ok,no)=>fbxLoader.load('assets/animations/'+clips[name],ok,undefined,no))).then(asset=>{
   if(!asset.animations.length)throw Error('Animation missing: '+name);
-  const clip=asset.animations[0].clone();
+  const clip=asset.animations[0].clone();clip.name=name;
   // Translation belongs to motionRoot; retain only the hips' vertical bob.
   for(const track of clip.tracks)if(/Hips\.position$/.test(track.name)){
    const bone=character.getObjectByName(track.name.slice(0,-9));
@@ -1005,6 +1006,7 @@ async function testMotion(name){
   if(action===testAction){if(!action.isRunning())action.reset().play();return;}
   const previous=testAction;
   action.reset().setEffectiveTimeScale(1).setEffectiveWeight(1).play();
+  if(['Idle','Walk','Run','Back','CombatIdle'].includes(name))action.setLoop(THREE.LoopRepeat,Infinity);
   if(previous){previous.fadeOut(locomotionFade);action.fadeIn(locomotionFade);}
   testAction=action;
   window.__spellDiagnostics?.setMotion(name,clip.tracks.length);
@@ -1040,7 +1042,6 @@ new GLTFLoader().load('assets/player/character-mobile-optimized.glb',gltf=>{clea
   o.material=Array.isArray(o.material)?o.material.map(restoreColor):restoreColor(o.material);
  }});
  motionRoot.add(model);character=model;
- model.traverse(o=>{if(o.isBone)o.userData.runRest=o.quaternion.clone()});
  const skinned=[];model.traverse(o=>{if(o.isSkinnedMesh)skinned.push(o)});
  const skinBones=new Set(skinned.flatMap(m=>m.skeleton.bones));
  model.traverse(o=>{if(o.isBone&&skinBones.has(o)){const n=o.name.toLowerCase();if(n.endsWith('head'))headBone=o;if(n.endsWith('neck'))neckBone=o;if(n.endsWith('lefthand'))leftHand=o;if(n.endsWith('righthand'))rightHand=o;if(n.endsWith('leftarm')||n.endsWith('leftupperarm'))leftUpperArm=o;if(n.endsWith('leftforearm'))leftForeArm=o;if(n.endsWith('rightshoulder'))rightShoulder=o;if(n.endsWith('rightarm')||n.endsWith('rightupperarm'))rightUpperArm=o;if(n.endsWith('rightforearm'))rightForeArm=o;if(n.endsWith('leftupleg'))leftHip=o;if(n.endsWith('leftleg'))leftKnee=o;if(n.endsWith('rightupleg'))rightHip=o;if(n.endsWith('rightleg'))rightKnee=o;if(n.endsWith('rightfoot'))rightFoot=o;}});
@@ -1193,62 +1194,21 @@ function applyStrafeFootwork(time){
  rightThigh.rotation.z-=phase*.13*strafeDirection;
 }
 
-// Exploration running: replace the source clip's raised casting arms with a lower,
-// bent-elbow swing driven opposite the actual animated thigh on each side.
-const runArmForward=new THREE.Vector3(),runArmRight=new THREE.Vector3(),runArmUp=new THREE.Vector3(0,1,0);
-const runShoulder=new THREE.Vector3(),runElbow=new THREE.Vector3(),runWrist=new THREE.Vector3(),runHip=new THREE.Vector3(),runKnee=new THREE.Vector3(),runElbowGoal=new THREE.Vector3(),runWristGoal=new THREE.Vector3();
-const runPalmX=new THREE.Vector3(),runPalmY=new THREE.Vector3(),runPalmZ=new THREE.Vector3(),runPalmMatrix=new THREE.Matrix4(),runPalmWorld=new THREE.Quaternion(),runPalmParent=new THREE.Quaternion();
-function alignRunWrist(arm){
- if(!arm.palmBasis){
-  const finger=name=>arm.hand.children.find(b=>b.isBone&&b.name.toLowerCase().includes(name+'1'));
-  const middle=finger('middle'),index=finger('index'),pinky=finger('pinky');
-  if(!middle||!index||!pinky)return;
-  const y=middle.position.clone().normalize(),x=index.position.clone().sub(pinky.position);x.addScaledVector(y,-x.dot(y)).normalize();
-  arm.palmBasis=new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(x,y,new THREE.Vector3().crossVectors(x,y))).invert();
- }
- arm.hand.getWorldPosition(runWrist);arm.lower.getWorldPosition(runElbow);
- runPalmY.copy(runWrist).sub(runElbow).normalize();
- runPalmX.copy(runArmUp).addScaledVector(runPalmY,-runArmUp.dot(runPalmY)).normalize();
- runPalmZ.crossVectors(runPalmX,runPalmY);
- runPalmWorld.setFromRotationMatrix(runPalmMatrix.makeBasis(runPalmX,runPalmY,runPalmZ)).multiply(arm.palmBasis);
- arm.hand.parent.getWorldQuaternion(runPalmParent);
- arm.hand.quaternion.copy(runPalmParent.invert().multiply(runPalmWorld));
-}
-let runArmWeight=0,runArmRig=null;
-function applyRunningArms(dt){
- const active=movementReady&&moving&&!combatMovementActive&&selectedMotion==='Run'&&!casting&&!castPending&&!poseEnabled&&!throwActive;
- runArmWeight=THREE.MathUtils.damp(runArmWeight,active?1:0,16,dt);
- if(!active||runArmWeight<.01||!leftHip||!leftKnee||!rightHip||!rightKnee||!leftUpperArm||!leftForeArm||!leftHand||!rightUpperArm||!rightForeArm||!rightHand)return;
- if(!runArmRig)runArmRig=[{side:-1,upper:leftUpperArm,lower:leftForeArm,hand:leftHand,hip:leftHip,knee:leftKnee},{side:1,upper:rightUpperArm,lower:rightForeArm,hand:rightHand,hip:rightHip,knee:rightKnee}].map(arm=>({...arm,bones:[arm.upper,arm.lower,arm.hand],source:[new THREE.Quaternion(),new THREE.Quaternion(),new THREE.Quaternion()]}));
- runArmForward.set(Math.sin(motionRoot.rotation.y),0,Math.cos(motionRoot.rotation.y));
- runArmRight.set(Math.cos(motionRoot.rotation.y),0,-Math.sin(motionRoot.rotation.y));
- character.updateMatrixWorld(true);
- for(const arm of runArmRig){
-  // Rebuild from neutral local rotations: aiming the animated arm preserves its casting twist.
-  arm.bones.forEach((bone,i)=>{arm.source[i].copy(bone.quaternion);bone.quaternion.copy(bone.userData.runRest)});
-  arm.upper.updateWorldMatrix(true,true);
-  arm.upper.getWorldPosition(runShoulder);arm.lower.getWorldPosition(runElbow);arm.hand.getWorldPosition(runWrist);
-  const a=runShoulder.distanceTo(runElbow),b=runElbow.distanceTo(runWrist);
-  arm.hip.getWorldPosition(runHip);arm.knee.getWorldPosition(runKnee);runKnee.sub(runHip);
-  const thighForward=runKnee.dot(runArmForward)/Math.max(.001,runKnee.length());
-  const swing=THREE.MathUtils.clamp(-thighForward*.65,-.42,.42);
-  runElbowGoal.copy(runShoulder).addScaledVector(runArmForward,Math.sin(swing)*a).addScaledVector(runArmUp,-Math.cos(swing)*a).addScaledVector(runArmRight,arm.side*.1*a);
-  aimBone(arm.upper,arm.lower,runElbowGoal,1);
-  arm.lower.getWorldPosition(runElbow);
-  runWristGoal.copy(runElbow).addScaledVector(runArmForward,Math.cos(swing)*b).addScaledVector(runArmUp,Math.sin(swing)*b).addScaledVector(runArmRight,arm.side*.02*b);
-  aimBone(arm.lower,arm.hand,runWristGoal,1);
-  alignRunWrist(arm);
-  arm.bones.forEach((bone,i)=>bone.quaternion.slerp(arm.source[i],1-runArmWeight));
-  arm.upper.updateWorldMatrix(true,true);
- }
-}
-
-const clock=new THREE.Clock();let t=0,lastFixtureTick=-1;function frame(){requestAnimationFrame(frame);window.__spellDiagnostics?.frame();const dt=Math.min(clock.getDelta(),.05);t+=dt;if(mixer&&mixer.timeScale!==0)mixer.update(dt);animateWalk(dt);movementStep(dt);playerContact.position.copy(motionRoot.position);playerContact.position.y+=.025;applyStrafeFootwork(t);applyPose();applyRunningArms(dt);updateDefense(t);applyLightningStance(t,dt);
+const motionRecorder=createMotionRecorder(
+ ()=>({owner:casting||castPending?'combat':moving&&selectedMotion==='Run'?'run-clip':poseEnabled?'pose':throwActive?'throw':channelPoseWeight>.01?'lightning':'locomotion',element:selectedElement,motion:selectedMotion,locomotion:locomotionState,moving,speed:movementSpeed,combat:combatMovementActive,casting:casting?{kind:casting.kind,elapsed:lastCombatTime-casting.started,duration:casting.duration}:null,pending:castPending,throwActive,poseEnabled,channelPoseWeight,heading:motionRoot.rotation.y,position:motionRoot.position.toArray()}),
+ ()=>[rightShoulder,rightUpperArm,rightForeArm,rightHand,leftUpperArm,leftForeArm,leftHand],
+ ()=>mixer?mixer._actions.filter(a=>a.enabled&&a.getEffectiveWeight()>.0001).map(a=>({clip:a.getClip().name,time:a.time,weight:a.getEffectiveWeight(),paused:a.paused,loop:a.loop})):[],
+ ()=>({root:{p:motionRoot.position.toArray(),q:motionRoot.quaternion.toArray()},model:{p:character.position.toArray(),q:character.quaternion.toArray(),s:character.scale.toArray()},bones:[...new Set(window.__spellRig.skinned.flatMap(m=>m.skeleton.bones))].map(b=>({name:b.name,q:b.quaternion.toArray(),p:b.position.toArray()}))})
+);
+window.__spellMotionCapture={snapshot:motionRecorder.snapshot,download:motionRecorder.download};
+const captureButton=document.createElement('button');captureButton.id='captureMotion';captureButton.textContent='Capture motion';captureButton.style.cssText='position:fixed;right:10px;top:max(8px,env(safe-area-inset-top));z-index:9;font-size:10px;padding:8px;min-height:44px';captureButton.title='Save the last 10 seconds on this device';captureButton.setAttribute('aria-label','Save motion capture locally');captureButton.setAttribute('aria-live','polite');document.body.append(captureButton);
+captureButton.onclick=()=>{const n=motionRecorder.download();captureButton.textContent=n?'Capture ready':'Still loading';setTimeout(()=>captureButton.textContent='Capture motion',2500)};
+const clock=new THREE.Clock();let t=0,lastFixtureTick=-1;function frame(){requestAnimationFrame(frame);window.__spellDiagnostics?.frame();const dt=Math.min(clock.getDelta(),.05);t+=dt;motionRecorder.begin(t);motionRecorder.layer('mixer',()=>{if(mixer&&mixer.timeScale!==0)mixer.update(dt)});animateWalk(dt);movementStep(dt);playerContact.position.copy(motionRoot.position);playerContact.position.y+=.025;applyStrafeFootwork(t);motionRecorder.layer('pose',()=>{if(poseEnabled)applyPose()});updateDefense(t);motionRecorder.layer('lightning',()=>applyLightningStance(t,dt));
  if(throwActive&&!poseEnabled&&throwStart<0&&rightHand){throwStart=t;character.updateMatrixWorld(true);throwDirection.set(0,.04,1).applyQuaternion(character.getWorldQuaternion(new THREE.Quaternion())).normalize();}
- if(!poseEnabled)poseThrow(t);animateFire(t);updateLightningChannel(t,dt);updateEnemies(t,dt);updateElementTransformation(t);updateFlameWave(t);if(!reduced&&dust.visible){for(let i=0;i<clouds.length;i++)clouds[i].position.x+=dt*(.18+i%3*.05);const p=pg.attributes.position;for(let i=0;i<p.count;i++){let y=p.getY(i)+dt*.13;if(y>14)y=.5;p.setY(i,y)}p.needsUpdate=true;}
+ motionRecorder.layer('throw',()=>{if(!poseEnabled&&!(moving&&selectedMotion==='Run')&&!casting)poseThrow(t)});motionRecorder.layer('combat',()=>animateFire(t));updateLightningChannel(t,dt);updateEnemies(t,dt);updateElementTransformation(t);updateFlameWave(t);if(!reduced&&dust.visible){for(let i=0;i<clouds.length;i++)clouds[i].position.x+=dt*(.18+i%3*.05);const p=pg.attributes.position;for(let i=0;i<p.count;i++){let y=p.getY(i)+dt*.13;if(y>14)y=.5;p.setY(i,y)}p.needsUpdate=true;}
 if(false&&introActive){const u=Math.min((performance.now()-introStart)/9000,1),s=u*u*(3-2*u);camera.position.set(14*(1-s)+targetPos.x*s,17*(1-s)+targetPos.y*s,30*(1-s)+targetPos.z*s);controls.target.lerp(targetLook,u<.8?.015:.07);camera.lookAt(0,2,-7);if(u>=1){introActive=false;controls.enabled=true;controls.target.set(0,1.2,0);camera.position.copy(targetPos)}}
 if(Math.floor(t*8)!==lastFixtureTick){lastFixtureTick=Math.floor(t*8);for(let i=0;i<brokenFixtures.length;i++){const flicker=Math.max(0,Math.sin(t*(3.2+i*.37)+i*4.7));brokenFixtures[i].material.color.setHex(flicker>.52?0xa6c1b6:0x27302e);}}
-renderer.render(scene,camera)}controls.enabled=false;frame();
+if(movementReady)motionRecorder.sample(t);renderer.render(scene,camera)}controls.enabled=false;frame();
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
 
 </script></body></html>

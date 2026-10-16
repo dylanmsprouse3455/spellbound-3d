@@ -1,0 +1,16 @@
+{
+  "Left": {
+    "upperArmForwardRange": [
+      -0.8296201550135995,
+      0.27617126800422703
+    ],
+    "wristBehindShoulderMinimum": -0.08707918703003562
+  },
+  "Right": {
+    "upperArmForwardRange": [
+      -0.7984025516586104,
+      0.3279294362593352
+    ],
+    "wristBehindShoulderMinimum": -0.06412266905778502
+  }
+}

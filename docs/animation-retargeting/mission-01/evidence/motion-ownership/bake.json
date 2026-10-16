@@ -1,0 +1,24 @@
+{
+  "bones": [
+    "mixamorig7LeftShoulder",
+    "mixamorig7LeftArm",
+    "mixamorig7LeftForeArm",
+    "mixamorig7LeftHand",
+    "mixamorig7RightShoulder",
+    "mixamorig7RightArm",
+    "mixamorig7RightForeArm",
+    "mixamorig7RightHand"
+  ],
+  "driveRange": [
+    -0.6583070297498617,
+    0.5205626625900728
+  ],
+  "duration": 0.7333333492279053,
+  "outputTracks": 53,
+  "samples": 46,
+  "sourceTracks": 53,
+  "swingRadians": [
+    -1,
+    0.35
+  ]
+}

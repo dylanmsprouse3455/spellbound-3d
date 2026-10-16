@@ -1,0 +1,1514 @@
+{
+  "url": "http://127.0.0.1:8790/docs/animation-retargeting/mission-01/",
+  "before": {
+    "action": {
+      "name": "DualMagic",
+      "time": 0,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": true,
+    "mode": "Combat",
+    "motion": "DualMagic",
+    "moving": false,
+    "position": [
+      -26.981,
+      0,
+      -1
+    ],
+    "speed": 0,
+    "warning": true
+  },
+  "combat": "dualwave",
+  "after": {
+    "action": {
+      "name": "Run",
+      "time": 0.3535714285714286,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Run",
+    "moving": true,
+    "position": [
+      -3.512499999999999,
+      0,
+      16
+    ],
+    "speed": 4.25,
+    "warning": false
+  },
+  "arms": [
+    {
+      "elbow": [
+        -2.3252807474606088,
+        1.3002652809307116,
+        15.6583168129487
+      ],
+      "fingerAlignment": 0.9999999998825405,
+      "hand": [
+        -2.0312009756573826,
+        1.30044440931912,
+        15.664422209070432
+      ],
+      "legForward": -0.0009456186603425622,
+      "shoulder": [
+        -2.325457290508491,
+        1.5971052320734407,
+        15.628640110167058
+      ],
+      "side": "left",
+      "thumbSideUp": 0.9751804099227644,
+      "upperDown": -0.9950394359418563,
+      "upperForward": 0.0006620675767447086
+    },
+    {
+      "elbow": [
+        -2.8121112156402086,
+        1.4247142133182875,
+        15.96196279556295
+      ],
+      "fingerAlignment": 0.9999999997864342,
+      "hand": [
+        -2.5392962013601483,
+        1.3149882750648652,
+        15.956318583444604
+      ],
+      "legForward": 0.5882618171852696,
+      "shoulder": [
+        -2.701369978671216,
+        1.700101112614555,
+        15.99170326249913
+      ],
+      "side": "right",
+      "thumbSideUp": 0.8396118029935828,
+      "upperDown": -0.9231712779039217,
+      "upperForward": -0.3713048795568055
+    }
+  ],
+  "capture": {
+    "build": "motion-ownership-v6",
+    "events": [],
+    "samples": [
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.65,
+            "weight": 0.0909082219004631
+          },
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.23214285714285715,
+            "weight": 0.9090917706489563
+          }
+        ],
+        "at": 55.21839999999851,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -3.96263,
+              1.73164,
+              15.80803
+            ],
+            "q": [
+              0.59796,
+              -0.32712,
+              0.58091,
+              0.44496
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -4.08176,
+              1.68028,
+              15.96034
+            ],
+            "q": [
+              0.61663,
+              -0.00631,
+              -0.18755,
+              0.76456
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -4.06058,
+              1.38323,
+              15.94302
+            ],
+            "q": [
+              0.15321,
+              -0.03473,
+              -0.692,
+              0.7046
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -3.76864,
+              1.40372,
+              15.97227
+            ],
+            "q": [
+              0.00555,
+              -0.10367,
+              0.04724,
+              0.99347
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -3.74175,
+              1.55701,
+              15.57191
+            ],
+            "q": [
+              0.53872,
+              -0.00803,
+              -0.00748,
+              0.84242
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -3.85939,
+              1.28329,
+              15.58706
+            ],
+            "q": [
+              -0.53491,
+              -0.00556,
+              0.45332,
+              0.71298
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -3.59236,
+              1.16511,
+              15.62238
+            ],
+            "q": [
+              0.01624,
+              -0.37107,
+              -0.04071,
+              0.92757
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.4759284488777067,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -3.9374999999999987,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.3535714285714286,
+            "weight": 1
+          }
+        ],
+        "at": 56.526599999997764,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -3.53196,
+              1.68958,
+              15.82088
+            ],
+            "q": [
+              0.55596,
+              -0.36631,
+              0.59319,
+              0.45261
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -3.65872,
+              1.66408,
+              15.97355
+            ],
+            "q": [
+              0.58674,
+              0.02494,
+              0.09752,
+              0.8035
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -3.77954,
+              1.39313,
+              15.94232
+            ],
+            "q": [
+              0.46055,
+              -0.04266,
+              -0.53629,
+              0.70602
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -3.51112,
+              1.27295,
+              15.94499
+            ],
+            "q": [
+              -0.00528,
+              -0.34681,
+              0.04842,
+              0.93667
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -3.31535,
+              1.50826,
+              15.58549
+            ],
+            "q": [
+              0.50504,
+              0.00394,
+              0.06673,
+              0.8605
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -3.40452,
+              1.22487,
+              15.61264
+            ],
+            "q": [
+              -0.61521,
+              -0.01465,
+              0.34452,
+              0.70895
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -3.12437,
+              1.13624,
+              15.62592
+            ],
+            "q": [
+              0.02092,
+              -0.45483,
+              -0.04125,
+              0.88938
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5474021961249345,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -3.512499999999999,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.47500000000000003,
+            "weight": 1
+          }
+        ],
+        "at": 57.602300000000746,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -3.17976,
+              1.76516,
+              15.81651
+            ],
+            "q": [
+              0.56294,
+              -0.35908,
+              0.59079,
+              0.4529
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -3.32289,
+              1.72845,
+              15.9514
+            ],
+            "q": [
+              0.538,
+              0.02662,
+              0.12725,
+              0.83286
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -3.4439,
+              1.45746,
+              15.92123
+            ],
+            "q": [
+              0.55135,
+              -0.04277,
+              -0.44173,
+              0.70644
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -3.17543,
+              1.33743,
+              15.91739
+            ],
+            "q": [
+              -0.00954,
+              -0.43312,
+              0.04819,
+              0.9
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -2.92257,
+              1.59391,
+              15.61963
+            ],
+            "q": [
+              0.27596,
+              0.02255,
+              0.15933,
+              0.9476
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -2.84967,
+              1.3062,
+              15.64967
+            ],
+            "q": [
+              -0.67885,
+              -0.02446,
+              0.19433,
+              0.70767
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -2.56462,
+              1.37838,
+              15.65739
+            ],
+            "q": [
+              0.02554,
+              -0.55379,
+              -0.03932,
+              0.83134
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5650274051976307,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -3.087499999999999,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.5964285714285714,
+            "weight": 1
+          }
+        ],
+        "at": 58.882599999997765,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -2.80048,
+              1.77556,
+              15.84653
+            ],
+            "q": [
+              0.55032,
+              -0.36812,
+              0.59953,
+              0.44967
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -2.94529,
+              1.72572,
+              15.97528
+            ],
+            "q": [
+              0.52574,
+              0.02388,
+              0.11337,
+              0.84272
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -3.04988,
+              1.44794,
+              15.94549
+            ],
+            "q": [
+              0.55608,
+              -0.04279,
+              -0.43566,
+              0.70651
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -2.77469,
+              1.34429,
+              15.9401
+            ],
+            "q": [
+              -0.00972,
+              -0.43759,
+              0.04825,
+              0.89782
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -2.5415,
+              1.62254,
+              15.6431
+            ],
+            "q": [
+              0.27663,
+              0.02378,
+              0.16726,
+              0.94601
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -2.46171,
+              1.33664,
+              15.67288
+            ],
+            "q": [
+              -0.67306,
+              -0.02331,
+              0.21431,
+              0.70748
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -2.17846,
+              1.4157,
+              15.6792
+            ],
+            "q": [
+              0.02497,
+              -0.54246,
+              -0.03983,
+              0.83877
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5693737282437936,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -2.662499999999999,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.7178571428571429,
+            "weight": 1
+          }
+        ],
+        "at": 60.15109999999776,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -2.28592,
+              1.70603,
+              15.85386
+            ],
+            "q": [
+              0.59077,
+              -0.33901,
+              0.57228,
+              0.45667
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -2.40726,
+              1.65625,
+              16.00495
+            ],
+            "q": [
+              0.56453,
+              0.01218,
+              0.0341,
+              0.82462
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -2.50675,
+              1.3766,
+              15.97524
+            ],
+            "q": [
+              0.39033,
+              -0.04225,
+              -0.58878,
+              0.70654
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -2.2297,
+              1.27804,
+              15.96947
+            ],
+            "q": [
+              -0.00189,
+              -0.28878,
+              0.04919,
+              0.95613
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -2.07009,
+              1.53619,
+              15.61142
+            ],
+            "q": [
+              0.52293,
+              0.00282,
+              0.05962,
+              0.85028
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -2.17341,
+              1.25791,
+              15.64107
+            ],
+            "q": [
+              -0.59749,
+              -0.01255,
+              0.37683,
+              0.70771
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -1.89772,
+              1.15555,
+              15.64705
+            ],
+            "q": [
+              0.01976,
+              -0.43267,
+              -0.04268,
+              0.90033
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5704455183112869,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -2.2374999999999994,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.10595236505780903,
+            "weight": 1
+          }
+        ],
+        "at": 61.97689999999851,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -1.81142,
+              1.70768,
+              15.84884
+            ],
+            "q": [
+              0.60854,
+              -0.31241,
+              0.59149,
+              0.42687
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -1.92156,
+              1.64626,
+              16.00416
+            ],
+            "q": [
+              0.59209,
+              -0.02648,
+              -0.21902,
+              0.77509
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -1.908,
+              1.34974,
+              15.97448
+            ],
+            "q": [
+              0.13671,
+              -0.03561,
+              -0.69305,
+              0.70691
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -1.61426,
+              1.36317,
+              15.96863
+            ],
+            "q": [
+              0.00767,
+              -0.0984,
+              0.04863,
+              0.99393
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -1.62015,
+              1.53971,
+              15.57952
+            ],
+            "q": [
+              0.55733,
+              -0.00085,
+              0.03991,
+              0.82933
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -1.74119,
+              1.26867,
+              15.60919
+            ],
+            "q": [
+              -0.55217,
+              -0.0076,
+              0.44059,
+              0.70777
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -1.47267,
+              1.14875,
+              15.61509
+            ],
+            "q": [
+              0.01749,
+              -0.38469,
+              -0.04366,
+              0.92185
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5707098184879134,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -1.8124999999999996,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.22738093648638047,
+            "weight": 1
+          }
+        ],
+        "at": 63.39109999999776,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -1.42285,
+              1.73847,
+              15.80655
+            ],
+            "q": [
+              0.59453,
+              -0.33034,
+              0.5805,
+              0.4477
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -1.51964,
+              1.68686,
+              15.97387
+            ],
+            "q": [
+              0.6277,
+              -0.02545,
+              -0.21642,
+              0.74733
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -1.48661,
+              1.39188,
+              15.94419
+            ],
+            "q": [
+              0.10144,
+              -0.03431,
+              -0.69908,
+              0.70698
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -1.19439,
+              1.4246,
+              15.93831
+            ],
+            "q": [
+              0.00888,
+              -0.07345,
+              0.04842,
+              0.99608
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -1.23168,
+              1.56732,
+              15.54431
+            ],
+            "q": [
+              0.55064,
+              -0.01065,
+              -0.02413,
+              0.83432
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -1.35272,
+              1.29628,
+              15.57399
+            ],
+            "q": [
+              -0.52549,
+              -0.00495,
+              0.47209,
+              0.70779
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -1.0842,
+              1.17637,
+              15.57988
+            ],
+            "q": [
+              0.01629,
+              -0.35933,
+              -0.04412,
+              0.93202
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5707749941090388,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -1.3874999999999997,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.3488095079149519,
+            "weight": 1
+          }
+        ],
+        "at": 64.06139999999851,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -0.98479,
+              1.68852,
+              15.82112
+            ],
+            "q": [
+              0.55543,
+              -0.36686,
+              0.59357,
+              0.45232
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -1.10705,
+              1.66307,
+              15.97743
+            ],
+            "q": [
+              0.59081,
+              0.02202,
+              0.09474,
+              0.80093
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -1.2271,
+              1.39161,
+              15.94774
+            ],
+            "q": [
+              0.45686,
+              -0.04299,
+              -0.53878,
+              0.7065
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -0.95817,
+              1.27268,
+              15.94187
+            ],
+            "q": [
+              -0.0048,
+              -0.34493,
+              0.049,
+              0.93734
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -0.77557,
+              1.50732,
+              15.57914
+            ],
+            "q": [
+              0.51279,
+              0.00316,
+              0.06068,
+              0.85636
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -0.86963,
+              1.22578,
+              15.60882
+            ],
+            "q": [
+              -0.61277,
+              -0.0144,
+              0.35146,
+              0.70766
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -0.5907,
+              1.13259,
+              15.6147
+            ],
+            "q": [
+              0.02062,
+              -0.45062,
+              -0.04227,
+              0.89148
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5707910662193312,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -0.9624999999999998,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      },
+      {
+        "actions": [
+          {
+            "clip": "mixamo.com",
+            "loop": 2201,
+            "paused": false,
+            "time": 0.47023807934352335,
+            "weight": 1
+          }
+        ],
+        "at": 64.66530000000074,
+        "bones": [
+          {
+            "name": "mixamorig7RightShoulder",
+            "p": [
+              -0.62842,
+              1.76303,
+              15.81587
+            ],
+            "q": [
+              0.56283,
+              -0.35905,
+              0.59118,
+              0.45256
+            ]
+          },
+          {
+            "name": "mixamorig7RightArm",
+            "p": [
+              -0.77022,
+              1.72705,
+              15.95235
+            ],
+            "q": [
+              0.54077,
+              0.02609,
+              0.12658,
+              0.83118
+            ]
+          },
+          {
+            "name": "mixamorig7RightForeArm",
+            "p": [
+              -0.89126,
+              1.45602,
+              15.92266
+            ],
+            "q": [
+              0.54933,
+              -0.04288,
+              -0.44412,
+              0.70651
+            ]
+          },
+          {
+            "name": "mixamorig7RightHand",
+            "p": [
+              -0.62276,
+              1.33612,
+              15.91678
+            ],
+            "q": [
+              -0.00937,
+              -0.43132,
+              0.04833,
+              0.90086
+            ]
+          },
+          {
+            "name": "mixamorig7LeftArm",
+            "p": [
+              -0.37353,
+              1.59097,
+              15.61644
+            ],
+            "q": [
+              0.28524,
+              0.02205,
+              0.15703,
+              0.94525
+            ]
+          },
+          {
+            "name": "mixamorig7LeftForeArm",
+            "p": [
+              -0.30617,
+              1.30188,
+              15.64612
+            ],
+            "q": [
+              -0.67835,
+              -0.02433,
+              0.19711,
+              0.70739
+            ]
+          },
+          {
+            "name": "mixamorig7LeftHand",
+            "p": [
+              -0.01976,
+              1.36862,
+              15.652
+            ],
+            "q": [
+              0.02543,
+              -0.55213,
+              -0.03956,
+              0.83243
+            ]
+          }
+        ],
+        "state": {
+          "casting": null,
+          "channelPoseWeight": 0,
+          "combat": false,
+          "element": "fire",
+          "heading": 1.5707950295529336,
+          "locomotion": "Run",
+          "motion": "Run",
+          "moving": true,
+          "pending": false,
+          "poseEnabled": false,
+          "position": [
+            -0.5374999999999998,
+            0,
+            16
+          ],
+          "speed": 4.25,
+          "throwActive": false
+        },
+        "writers": [
+          {
+            "bones": [
+              "mixamorig7RightShoulder",
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "mixer"
+          },
+          {
+            "bones": [
+              "mixamorig7RightArm",
+              "mixamorig7RightForeArm",
+              "mixamorig7RightHand",
+              "mixamorig7LeftArm",
+              "mixamorig7LeftForeArm",
+              "mixamorig7LeftHand"
+            ],
+            "layer": "running-overlay"
+          }
+        ]
+      }
+    ],
+    "schema": 1,
+    "seconds": 10,
+    "viewport": {
+      "dpr": 1,
+      "height": 844,
+      "width": 390
+    }
+  }
+}
