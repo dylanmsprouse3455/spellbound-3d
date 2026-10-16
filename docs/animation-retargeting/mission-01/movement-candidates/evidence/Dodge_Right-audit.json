@@ -1,0 +1,199 @@
+{
+  "duration": 0.4000000059604645,
+  "legScale": 2.114028634738072,
+  "mapping": [
+    {
+      "source": "hips",
+      "sourceUuid": "b24be8d7-7381-4d3e-b0db-a12d0eacfe08",
+      "target": "mixamorig7Hips",
+      "targetUuid": "03bec942-6525-471c-9ab8-eb2bbb79def1"
+    },
+    {
+      "source": "spine",
+      "sourceUuid": "8a0ff203-6d63-4744-805b-e3a6172136de",
+      "target": "mixamorig7Spine",
+      "targetUuid": "a945baac-4aa4-4c03-bf1d-60b7bbe56a55"
+    },
+    {
+      "source": "chest",
+      "sourceUuid": "9f4c25a7-1285-425e-81fb-1bd48e50862d",
+      "target": "mixamorig7Spine2",
+      "targetUuid": "98330dd1-a7e8-44e4-957f-ae86ee12c438"
+    },
+    {
+      "source": "head",
+      "sourceUuid": "79e92c12-e4f4-423c-9a5f-583d64266356",
+      "target": "mixamorig7Head",
+      "targetUuid": "09e0c17f-31c0-4463-9134-ae8cbb64fd8a"
+    },
+    {
+      "source": "upperarml",
+      "sourceUuid": "6c7d440f-3e14-4c81-8429-a3f057a2c123",
+      "target": "mixamorig7LeftArm",
+      "targetUuid": "77e792d5-4704-4f9c-9a89-ce172b33ad35"
+    },
+    {
+      "source": "lowerarml",
+      "sourceUuid": "fe9dd133-272b-48a3-81d5-e0eec0fd3f2d",
+      "target": "mixamorig7LeftForeArm",
+      "targetUuid": "cd4690f6-d282-4419-a34a-c6154cd53da1"
+    },
+    {
+      "source": "wristl",
+      "sourceUuid": "395354ce-77d1-4d27-a0f4-67a9e6645541",
+      "target": "mixamorig7LeftHand",
+      "targetUuid": "5f0f471b-8816-4144-a9b6-2d927befcc8b"
+    },
+    {
+      "source": "upperarmr",
+      "sourceUuid": "5a49098e-af3e-487c-a608-38b9610ba58b",
+      "target": "mixamorig7RightArm",
+      "targetUuid": "d8a6a282-47e4-4c42-bcac-114640d74963"
+    },
+    {
+      "source": "lowerarmr",
+      "sourceUuid": "a5fdc49e-80f4-4252-8206-07e943139d3e",
+      "target": "mixamorig7RightForeArm",
+      "targetUuid": "78bbc2aa-dbc0-4a75-9ec3-1fda65ecab21"
+    },
+    {
+      "source": "wristr",
+      "sourceUuid": "9dd89e04-f084-493f-82f8-b81783032996",
+      "target": "mixamorig7RightHand",
+      "targetUuid": "d6e9f61b-dd16-4b4b-aafa-37a99a207b6c"
+    },
+    {
+      "source": "upperlegl",
+      "sourceUuid": "341bb1a3-55e2-4d6a-898c-87cd65ecf1d5",
+      "target": "mixamorig7LeftUpLeg",
+      "targetUuid": "8fc86d63-5528-41ce-8d8c-7685b752fc8a"
+    },
+    {
+      "source": "lowerlegl",
+      "sourceUuid": "7a499cc6-a121-47a1-83b2-fafc30a4d742",
+      "target": "mixamorig7LeftLeg",
+      "targetUuid": "fa211d02-3ed3-41d7-b523-8f4a579d94bf"
+    },
+    {
+      "source": "footl",
+      "sourceUuid": "f9abd84a-ea76-4295-9df9-077c72af0925",
+      "target": "mixamorig7LeftFoot",
+      "targetUuid": "350d42da-1384-4724-a198-525960b36465"
+    },
+    {
+      "source": "toesl",
+      "sourceUuid": "d293b895-4e0f-4739-ab29-7011bc34ae5e",
+      "target": "mixamorig7LeftToeBase",
+      "targetUuid": "d54ced76-2f07-412a-9548-25bce0e5a641"
+    },
+    {
+      "source": "upperlegr",
+      "sourceUuid": "a14a693c-dd57-4bee-a2d6-982431c501dc",
+      "target": "mixamorig7RightUpLeg",
+      "targetUuid": "b69ea302-7afd-4ba4-af20-9ed9f18ea1ab"
+    },
+    {
+      "source": "lowerlegr",
+      "sourceUuid": "9d8ec708-fb8c-42ae-bef7-45634b2a2f5f",
+      "target": "mixamorig7RightLeg",
+      "targetUuid": "bd12ddb2-6d8d-48b1-bbfd-e03c85b7994d"
+    },
+    {
+      "source": "footr",
+      "sourceUuid": "530dcf12-f349-4295-8f79-2d0a9e29fe85",
+      "target": "mixamorig7RightFoot",
+      "targetUuid": "3c6fa4b1-fd09-4564-a152-1ee03234d7a1"
+    },
+    {
+      "source": "toesr",
+      "sourceUuid": "fdcedbd1-8d1f-4088-bc90-fe971c2c50e1",
+      "target": "mixamorig7RightToeBase",
+      "targetUuid": "d99fe2ce-f0b1-4735-9d56-c7959cf0b531"
+    }
+  ],
+  "method": "World rotation deltas relative to each bind pose; target local rotations solved in parent order. Leg-length-scaled hip translation.",
+  "samples": 14,
+  "sourceClip": "Dodge_Right",
+  "sourceOrigin": [
+    0,
+    0.4056634306907654,
+    0
+  ],
+  "targetOrigin": [
+    -3.0059811452929405e-05,
+    0.977503466228945,
+    0.0014289649511171566
+  ],
+  "trajectory": [
+    [
+      0,
+      -0.028749953055504568,
+      0
+    ],
+    [
+      -0.06043263665555368,
+      -0.048423102436459003,
+      5.452181244878787e-09
+    ],
+    [
+      -0.20121395615214835,
+      -0.08355370280326106,
+      1.9567273177657008e-08
+    ],
+    [
+      -0.3808287014640777,
+      -0.10603725267119184,
+      2.8994599984357976e-08
+    ],
+    [
+      -0.5637177690161065,
+      -0.11095552602694556,
+      5.152333235646437e-08
+    ],
+    [
+      -0.7361614744503708,
+      -0.11095552602694556,
+      8.072277772454633e-08
+    ],
+    [
+      -0.894366919193398,
+      -0.11095552602694556,
+      1.1131555472616558e-07
+    ],
+    [
+      -1.036526621438358,
+      -0.11095552602694556,
+      1.4148427329397624e-07
+    ],
+    [
+      -1.1608331017130575,
+      -0.11095552602695483,
+      2.469536349152439e-07
+    ],
+    [
+      -1.2655307092627508,
+      -0.1109555260269696,
+      3.950105944170989e-07
+    ],
+    [
+      -1.349097046819471,
+      -0.1109555260269696,
+      4.1391146275949155e-07
+    ],
+    [
+      -1.4103983180449073,
+      -0.1109555260269696,
+      4.2748134022072864e-07
+    ],
+    [
+      -1.4484042885204618,
+      -0.11095552602697008,
+      4.3959729676703294e-07
+    ],
+    [
+      -1.462084366445467,
+      -0.11095552602697559,
+      4.890287822611672e-07
+    ]
+  ]
+}

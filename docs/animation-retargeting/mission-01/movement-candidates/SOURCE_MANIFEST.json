@@ -1,0 +1,26 @@
+{
+  "publisher": "Kay Lousberg",
+  "pack": "KayKit Character Animations Free 1.1",
+  "url": "https://kaylousberg.itch.io/kaykit-character-animations",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "sources/MovementBasic.glb",
+      "original": "animation-library/preview-assets/KayKit-Character-Animations-Free-1.1__Rig_Medium_MovementBasic.glb",
+      "sha256": "11422afd50abf7e8c92ea107e2e0bc94abd38023d6d15f55ad580347efbfa29e",
+      "bytes": 689624
+    },
+    {
+      "file": "sources/MovementAdvanced.glb",
+      "original": "animation-library/preview-assets/KayKit-Character-Animations-Free-1.1__Rig_Medium_MovementAdvanced.glb",
+      "sha256": "8b2317cf81e3f24149e4b791c27e1932bebd46cd378ed962e7d27d642fad8c56",
+      "bytes": 719628
+    },
+    {
+      "file": "sources/General.glb",
+      "original": "animation-library/preview-assets/KayKit-Character-Animations-Free-1.1__Rig_Medium_General.glb",
+      "sha256": "5f725c0f745f36078c7238968cd5c04843cbc6260689eb6e7f5e2bbd7ffdd7ad",
+      "bytes": 828240
+    }
+  ]
+}

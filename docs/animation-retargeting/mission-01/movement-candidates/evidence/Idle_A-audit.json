@@ -1,0 +1,299 @@
+{
+  "duration": 1.0666667222976685,
+  "legScale": 2.114028634738072,
+  "mapping": [
+    {
+      "source": "hips",
+      "sourceUuid": "1de26747-a3fd-43c4-8af5-13ffffb4fcba",
+      "target": "mixamorig7Hips",
+      "targetUuid": "03bec942-6525-471c-9ab8-eb2bbb79def1"
+    },
+    {
+      "source": "spine",
+      "sourceUuid": "7bbbd0fd-5f52-49d4-a4e9-e0a944ff4bfa",
+      "target": "mixamorig7Spine",
+      "targetUuid": "a945baac-4aa4-4c03-bf1d-60b7bbe56a55"
+    },
+    {
+      "source": "chest",
+      "sourceUuid": "9a450d9e-5127-473a-af75-3d45f02ce382",
+      "target": "mixamorig7Spine2",
+      "targetUuid": "98330dd1-a7e8-44e4-957f-ae86ee12c438"
+    },
+    {
+      "source": "head",
+      "sourceUuid": "eefdc655-d1a2-4e39-a551-11954f442a83",
+      "target": "mixamorig7Head",
+      "targetUuid": "09e0c17f-31c0-4463-9134-ae8cbb64fd8a"
+    },
+    {
+      "source": "upperarml",
+      "sourceUuid": "35461ce9-f126-47b6-b155-50c2865d54cf",
+      "target": "mixamorig7LeftArm",
+      "targetUuid": "77e792d5-4704-4f9c-9a89-ce172b33ad35"
+    },
+    {
+      "source": "lowerarml",
+      "sourceUuid": "477eade8-4730-4834-8605-92cfc7df6177",
+      "target": "mixamorig7LeftForeArm",
+      "targetUuid": "cd4690f6-d282-4419-a34a-c6154cd53da1"
+    },
+    {
+      "source": "wristl",
+      "sourceUuid": "07391624-4119-4e53-8d8a-88a66baee918",
+      "target": "mixamorig7LeftHand",
+      "targetUuid": "5f0f471b-8816-4144-a9b6-2d927befcc8b"
+    },
+    {
+      "source": "upperarmr",
+      "sourceUuid": "d8e18854-d9c0-4444-a6e9-5b04ca977cda",
+      "target": "mixamorig7RightArm",
+      "targetUuid": "d8a6a282-47e4-4c42-bcac-114640d74963"
+    },
+    {
+      "source": "lowerarmr",
+      "sourceUuid": "9572efe9-653a-42ec-8211-7e288a2ac785",
+      "target": "mixamorig7RightForeArm",
+      "targetUuid": "78bbc2aa-dbc0-4a75-9ec3-1fda65ecab21"
+    },
+    {
+      "source": "wristr",
+      "sourceUuid": "73989037-bbf1-4693-b0fe-4524a4aabefe",
+      "target": "mixamorig7RightHand",
+      "targetUuid": "d6e9f61b-dd16-4b4b-aafa-37a99a207b6c"
+    },
+    {
+      "source": "upperlegl",
+      "sourceUuid": "8240ca00-923c-45f7-87cf-93e1920943e4",
+      "target": "mixamorig7LeftUpLeg",
+      "targetUuid": "8fc86d63-5528-41ce-8d8c-7685b752fc8a"
+    },
+    {
+      "source": "lowerlegl",
+      "sourceUuid": "c5a145e7-3897-496e-859f-9609bffd0e7b",
+      "target": "mixamorig7LeftLeg",
+      "targetUuid": "fa211d02-3ed3-41d7-b523-8f4a579d94bf"
+    },
+    {
+      "source": "footl",
+      "sourceUuid": "1d664764-3bb7-478b-ba88-55e51d1525cd",
+      "target": "mixamorig7LeftFoot",
+      "targetUuid": "350d42da-1384-4724-a198-525960b36465"
+    },
+    {
+      "source": "toesl",
+      "sourceUuid": "e1880459-d657-4460-8b52-c341cf5b4bf9",
+      "target": "mixamorig7LeftToeBase",
+      "targetUuid": "d54ced76-2f07-412a-9548-25bce0e5a641"
+    },
+    {
+      "source": "upperlegr",
+      "sourceUuid": "4591c4b7-b2ef-43e4-be3e-e96cf0fc8206",
+      "target": "mixamorig7RightUpLeg",
+      "targetUuid": "b69ea302-7afd-4ba4-af20-9ed9f18ea1ab"
+    },
+    {
+      "source": "lowerlegr",
+      "sourceUuid": "12653f13-496f-4671-b298-bd850cd3739a",
+      "target": "mixamorig7RightLeg",
+      "targetUuid": "bd12ddb2-6d8d-48b1-bbfd-e03c85b7994d"
+    },
+    {
+      "source": "footr",
+      "sourceUuid": "2db184bd-1a76-480c-b193-b2757763349d",
+      "target": "mixamorig7RightFoot",
+      "targetUuid": "3c6fa4b1-fd09-4564-a152-1ee03234d7a1"
+    },
+    {
+      "source": "toesr",
+      "sourceUuid": "496e6442-a1c3-4cf2-bdbd-1fef4b9e7416",
+      "target": "mixamorig7RightToeBase",
+      "targetUuid": "d99fe2ce-f0b1-4735-9d56-c7959cf0b531"
+    }
+  ],
+  "method": "World rotation deltas relative to each bind pose; target local rotations solved in parent order. Leg-length-scaled hip translation.",
+  "samples": 34,
+  "sourceClip": "Idle_A",
+  "sourceOrigin": [
+    0,
+    0.4056634306907654,
+    0
+  ],
+  "targetOrigin": [
+    -3.0059811452929405e-05,
+    0.977503466228945,
+    0.0014289649511171566
+  ],
+  "trajectory": [
+    [
+      0,
+      -0.028749953055504568,
+      0
+    ],
+    [
+      0,
+      -0.028939832530628994,
+      0
+    ],
+    [
+      0,
+      -0.029465702988587243,
+      0
+    ],
+    [
+      0,
+      -0.030280999599614847,
+      0
+    ],
+    [
+      0,
+      -0.03133937866454729,
+      0
+    ],
+    [
+      0,
+      -0.03259439779573982,
+      0
+    ],
+    [
+      0,
+      -0.033999554960848895,
+      0
+    ],
+    [
+      0,
+      -0.03550844174874638,
+      0
+    ],
+    [
+      0,
+      -0.03707461677166173,
+      0
+    ],
+    [
+      0,
+      -0.038651584751637436,
+      0
+    ],
+    [
+      0,
+      -0.04019296958839915,
+      0
+    ],
+    [
+      0,
+      -0.04165230926770013,
+      0
+    ],
+    [
+      0,
+      -0.04298317631683687,
+      0
+    ],
+    [
+      0,
+      -0.04413910126105586,
+      0
+    ],
+    [
+      0,
+      -0.04507361271648598,
+      0
+    ],
+    [
+      0,
+      -0.04574032903082208,
+      0
+    ],
+    [
+      0,
+      -0.04609278445735745,
+      0
+    ],
+    [
+      0,
+      -0.046092784287591934,
+      0
+    ],
+    [
+      0,
+      -0.04574032826605329,
+      0
+    ],
+    [
+      0,
+      -0.04507361162147811,
+      0
+    ],
+    [
+      0,
+      -0.044139099659413934,
+      0
+    ],
+    [
+      0,
+      -0.04298317470777113,
+      0
+    ],
+    [
+      0,
+      -0.04165230707274656,
+      0
+    ],
+    [
+      0,
+      -0.040192967753289795,
+      0
+    ],
+    [
+      0,
+      -0.03865158224024505,
+      0
+    ],
+    [
+      0,
+      -0.03707461478890341,
+      0
+    ],
+    [
+      0,
+      -0.03550843852664066,
+      0
+    ],
+    [
+      0,
+      -0.033999552745938064,
+      0
+    ],
+    [
+      0,
+      -0.03259439502457527,
+      0
+    ],
+    [
+      0,
+      -0.03133937701757341,
+      0
+    ],
+    [
+      0,
+      -0.030280997555214247,
+      0
+    ],
+    [
+      0,
+      -0.029465702088858063,
+      0
+    ],
+    [
+      0,
+      -0.028939832042554656,
+      0
+    ],
+    [
+      0,
+      -0.02874995892988536,
+      0
+    ]
+  ]
+}
