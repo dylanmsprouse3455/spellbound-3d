@@ -1,0 +1,100 @@
+{
+  "url": "http://127.0.0.1:8790/docs/animation-retargeting/mission-01/",
+  "running": {
+    "action": {
+      "name": "Run",
+      "time": 0.7178571428571429,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Run",
+    "moving": true,
+    "position": [
+      -2.2374999999999994,
+      0,
+      16
+    ],
+    "speed": 4.25,
+    "warning": false
+  },
+  "combatMoving": {
+    "action": {
+      "name": "Back",
+      "time": 0.44999999999999996,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": true,
+    "mode": "Combat",
+    "motion": "Back",
+    "moving": true,
+    "position": [
+      3.95,
+      0,
+      -7.306477999999784
+    ],
+    "speed": 2.5,
+    "warning": true
+  },
+  "combatReady": {
+    "action": {
+      "name": "Idle",
+      "time": 1.1000000000000003,
+      "weight": 1
+    },
+    "channel": true,
+    "hands": true,
+    "mode": "Combat",
+    "motion": "Idle",
+    "moving": false,
+    "position": [
+      3.95,
+      0,
+      -7.306477999999784
+    ],
+    "speed": 0,
+    "warning": true
+  },
+  "runningAgain": {
+    "action": {
+      "name": "Run",
+      "time": 0.5357142857142857,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Run",
+    "moving": true,
+    "position": [
+      -2.874999999999999,
+      0,
+      16
+    ],
+    "speed": 4.25,
+    "warning": false
+  },
+  "stopped": {
+    "action": {
+      "name": "Idle",
+      "time": 0.44999999999999996,
+      "weight": 1
+    },
+    "channel": false,
+    "hands": false,
+    "mode": "Exploration",
+    "motion": "Idle",
+    "moving": false,
+    "position": [
+      -2.0249999999999995,
+      0,
+      16
+    ],
+    "speed": 0,
+    "warning": false
+  },
+  "errors": [],
+  "complete": true
+}
