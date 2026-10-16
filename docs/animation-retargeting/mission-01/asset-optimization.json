@@ -1,0 +1,149 @@
+[
+  {
+    "source": "character-mobile.glb",
+    "output": "character-mobile-optimized.glb",
+    "bytesBefore": 14637724,
+    "bytesAfter": 4278288,
+    "images": [
+      {
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 379489,
+        "bytesAfter": 101607
+      },
+      {
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 4675217,
+        "bytesAfter": 1359922
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 264115,
+        "bytesAfter": 6764
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 1697427,
+        "bytesAfter": 121402
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 938800,
+        "bytesAfter": 93544
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 1327546,
+        "bytesAfter": 113781
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 262944,
+        "bytesAfter": 6463
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 1673519,
+        "bytesAfter": 103877
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 764229,
+        "bytesAfter": 98299
+      },
+      {
+        "before": [
+          4096,
+          4096
+        ],
+        "after": [
+          1024,
+          1024
+        ],
+        "bytesBefore": 424330,
+        "bytesAfter": 42568
+      }
+    ],
+    "clipsBefore": 0,
+    "clipsAfter": [],
+    "rigAndRetainedBuffersVerified": true
+  },
+  {
+    "source": "UAL2_Standard.glb",
+    "output": "UAL2_Mission1.glb",
+    "bytesBefore": 8091444,
+    "bytesAfter": 1378332,
+    "images": [],
+    "clipsBefore": 43,
+    "clipsAfter": [
+      "Hit_Knockback",
+      "LayToIdle",
+      "Zombie_Idle_Loop",
+      "Zombie_Scratch",
+      "Zombie_Walk_Fwd_Loop"
+    ],
+    "rigAndRetainedBuffersVerified": true
+  }
+]

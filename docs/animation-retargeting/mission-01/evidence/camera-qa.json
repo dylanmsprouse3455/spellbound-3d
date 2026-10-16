@@ -1,0 +1,95 @@
+{
+  "url": "http://127.0.0.1:8790/docs/animation-retargeting/mission-01/",
+  "views": [
+    {
+      "image": "enemy-hit.png",
+      "camera": [
+        29.999158144874364,
+        2.2051503800734507,
+        4.86539501654531
+      ],
+      "player": [
+        30,
+        0,
+        2
+      ],
+      "stats": {
+        "calls": 68,
+        "geometries": 53,
+        "pixelRatio": 1,
+        "sceneObjects": 144,
+        "shadows": false,
+        "textures": 27,
+        "triangles": 89582
+      }
+    },
+    {
+      "image": "corridor.png",
+      "camera": [
+        28.00044973464832,
+        2.8669855368533135,
+        4.851406345208296
+      ],
+      "player": [
+        28,
+        0,
+        0
+      ],
+      "stats": {
+        "calls": 51,
+        "geometries": 53,
+        "pixelRatio": 1,
+        "sceneObjects": 144,
+        "shadows": false,
+        "textures": 27,
+        "triangles": 88896
+      }
+    },
+    {
+      "image": "corridor-near-wall.png",
+      "camera": [
+        28.0000000123841,
+        5.55,
+        4.86539501654531
+      ],
+      "player": [
+        28,
+        0,
+        4.2
+      ],
+      "stats": {
+        "calls": 51,
+        "geometries": 53,
+        "pixelRatio": 1,
+        "sceneObjects": 144,
+        "shadows": false,
+        "textures": 27,
+        "triangles": 88906
+      }
+    },
+    {
+      "image": "atrium-wide.png",
+      "camera": [
+        0.0007710205818521802,
+        3.7487399835907467,
+        20.495977626833348
+      ],
+      "player": [
+        0,
+        0,
+        13
+      ],
+      "stats": {
+        "calls": 90,
+        "geometries": 64,
+        "pixelRatio": 1,
+        "sceneObjects": 144,
+        "shadows": false,
+        "textures": 27,
+        "triangles": 91422
+      }
+    }
+  ],
+  "errors": [],
+  "complete": true
+}

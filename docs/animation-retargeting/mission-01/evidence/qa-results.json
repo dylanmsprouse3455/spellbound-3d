@@ -1,0 +1,459 @@
+{
+  "url": "http://127.0.0.1:8790/docs/animation-retargeting/mission-01/",
+  "checks": {
+    "initial": {
+      "batching": {
+        "batches": 67,
+        "original": 526
+      },
+      "enemies": [
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "Atrium Shambler",
+          "phase": "chase",
+          "position": [
+            0,
+            0,
+            -5.450000000000006
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "Food Court Shambler",
+          "phase": "chase",
+          "position": [
+            6.4962791247747305,
+            0,
+            1.6240697811936826
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Idle_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "East Wing Stalker",
+          "phase": "patrol",
+          "position": [
+            29.681,
+            0,
+            1
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Idle_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "West Wing Stalker",
+          "phase": "patrol",
+          "position": [
+            -29.681,
+            0,
+            -1
+          ]
+        }
+      ],
+      "ready": true,
+      "stats": {
+        "calls": 80,
+        "geometries": 30,
+        "pixelRatio": 1,
+        "sceneObjects": 144,
+        "shadows": false,
+        "textures": 19,
+        "triangles": 91678
+      },
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "allPlayerAnimations": [
+      {
+        "clips": 1,
+        "duration": 1.7999999523162842,
+        "name": "standing idle.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 1.1333333253860474,
+        "name": "Standing Walk Forward.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 0.7333333492279053,
+        "name": "Standing Run Forward.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 2.366666555404663,
+        "name": "Standing Jump.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 1.2000000476837158,
+        "name": "Standing Walk Back.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 5.199999809265137,
+        "name": "standing idle 02.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 2.299999952316284,
+        "name": "Standing 1H Magic Attack 01.fbx",
+        "tracks": 53
+      },
+      {
+        "clips": 1,
+        "duration": 3.133333444595337,
+        "name": "Standing 2H Magic Area Attack 02.fbx",
+        "tracks": 53
+      }
+    ],
+    "touchAbilities": [
+      {
+        "button": "elementFire",
+        "rect": {
+          "h": 48,
+          "w": 98,
+          "x": 282,
+          "y": 675
+        },
+        "selected": "fire"
+      },
+      {
+        "button": "elementLightning",
+        "rect": {
+          "h": 48,
+          "w": 98,
+          "x": 282,
+          "y": 619
+        },
+        "selected": "lightning"
+      }
+    ],
+    "touchMovement": {
+      "before": [
+        0,
+        0,
+        0
+      ],
+      "during": [
+        0,
+        0,
+        -1.875
+      ],
+      "afterRelease": [
+        0,
+        0,
+        -4.625
+      ],
+      "later": [
+        0,
+        0,
+        -4.625
+      ],
+      "moving": false
+    },
+    "enemyCombat": {
+      "before": [
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 75.99999999999966,
+          "loaded": true,
+          "name": "Atrium Shambler",
+          "phase": "patrol",
+          "position": [
+            0,
+            0,
+            -3.2315000000000107
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Scratch",
+          "hp": 74.79999999999995,
+          "loaded": true,
+          "name": "Food Court Shambler",
+          "phase": "attack",
+          "position": [
+            0.8290836437029315,
+            0,
+            -2.956611869236446
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Hit_Knockback",
+          "hp": 96.79999999999995,
+          "loaded": true,
+          "name": "East Wing Stalker",
+          "phase": "hit",
+          "position": [
+            30.869999999999997,
+            0,
+            1
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "West Wing Stalker",
+          "phase": "patrol",
+          "position": [
+            -30.869999999999997,
+            0,
+            -1
+          ]
+        }
+      ],
+      "hit": [
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 75.99999999999966,
+          "loaded": true,
+          "name": "Atrium Shambler",
+          "phase": "patrol",
+          "position": [
+            0,
+            0,
+            -3.52150000000001
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Scratch",
+          "hp": 74.79999999999995,
+          "loaded": true,
+          "name": "Food Court Shambler",
+          "phase": "attack",
+          "position": [
+            0.8290836437029315,
+            0,
+            -2.956611869236446
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Hit_Knockback",
+          "hp": 69.79999999999995,
+          "loaded": true,
+          "name": "East Wing Stalker",
+          "phase": "hit",
+          "position": [
+            30.869999999999997,
+            0,
+            1
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "West Wing Stalker",
+          "phase": "patrol",
+          "position": [
+            -30.869999999999997,
+            0,
+            -1
+          ]
+        }
+      ],
+      "death": [
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 75.99999999999966,
+          "loaded": true,
+          "name": "Atrium Shambler",
+          "phase": "patrol",
+          "position": [
+            0,
+            0,
+            -4.333500000000008
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Hit_Knockback",
+          "hp": 62.799999999999955,
+          "loaded": true,
+          "name": "Food Court Shambler",
+          "phase": "hit",
+          "position": [
+            0.9483627331133405,
+            0,
+            -2.874164923693124
+          ]
+        },
+        {
+          "active": false,
+          "animation": "LayToIdle",
+          "hp": 0,
+          "loaded": true,
+          "name": "East Wing Stalker",
+          "phase": "death",
+          "position": [
+            30.869999999999997,
+            0,
+            1
+          ]
+        },
+        {
+          "active": true,
+          "animation": "Zombie_Walk_Fwd_Loop",
+          "hp": 100,
+          "loaded": true,
+          "name": "West Wing Stalker",
+          "phase": "patrol",
+          "position": [
+            -30.869999999999997,
+            0,
+            -1
+          ]
+        }
+      ],
+      "warning": false
+    },
+    "stairs": {
+      "ascent": [
+        [
+          -11.5,
+          0.6551181021800383,
+          -3.475
+        ],
+        [
+          -11.5,
+          1.4039133822009011,
+          -4.85
+        ],
+        [
+          -11.5,
+          2.0844689655116744,
+          -6.1
+        ],
+        [
+          -11.5,
+          2.833080076632098,
+          -7.475
+        ],
+        [
+          -11.5,
+          3.513635632187655,
+          -8.725
+        ],
+        [
+          -11.5,
+          4.19419118774321,
+          -9.975
+        ],
+        [
+          -11.5,
+          4.874746743298766,
+          -11.225
+        ],
+        [
+          -11.5,
+          5.079885116365112,
+          -12.475
+        ]
+      ],
+      "top": [
+        -11.5,
+        5.079999998429058,
+        -13.1
+      ],
+      "groundWarningAtTop": false,
+      "descent": [
+        [
+          -11.5,
+          5.08,
+          -11.725
+        ],
+        [
+          -11.5,
+          4.509383030704736,
+          -10.35
+        ],
+        [
+          -11.5,
+          3.7608088066958456,
+          -8.975
+        ],
+        [
+          -11.5,
+          3.080253256699369,
+          -7.725
+        ],
+        [
+          -11.5,
+          2.467753256701233,
+          -6.6
+        ],
+        [
+          -11.5,
+          1.719142145590123,
+          -5.225
+        ],
+        [
+          -11.5,
+          0.9705310344790118,
+          -3.8499999999999996
+        ],
+        [
+          -11.5,
+          0.1302943815640718,
+          -2.4749999999999996
+        ],
+        [
+          -11.5,
+          1.9639672800815903e-05,
+          -1.0999999999999996
+        ]
+      ],
+      "bottom": [
+        -11.5,
+        2.685567365441778e-10,
+        -0.47499999999999964
+      ]
+    },
+    "landscapeControls": [
+      {
+        "h": 48,
+        "id": "elementFire",
+        "w": 100,
+        "x": 734,
+        "y": 332
+      },
+      {
+        "h": 48,
+        "id": "elementLightning",
+        "w": 100,
+        "x": 626,
+        "y": 332
+      }
+    ],
+    "browserErrors": [],
+    "complete": true
+  }
+}
